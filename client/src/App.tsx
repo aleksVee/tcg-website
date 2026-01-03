@@ -5,14 +5,37 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-
+import Portfolio from "./pages/Portfolio";
+import PlaceholderPage from "./pages/PlaceholderPage";
 
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
+      <Route path="/" component={Home} />
+      <Route path="/portfolio" component={Portfolio} />
+      
+      <Route path="/services">
+        <PlaceholderPage 
+          title="Our Services" 
+          description="Detailed information about our residential, commercial, and artisanal concrete services is coming soon. For now, please view our portfolio or contact us for a quote." 
+        />
+      </Route>
+      
+      <Route path="/story">
+        <PlaceholderPage 
+          title="Our Story" 
+          description="The 40+ year history of The Concrete Guyz is being documented. Check back soon to learn about our family legacy and commitment to Canberra." 
+        />
+      </Route>
+      
+      <Route path="/contact">
+        <PlaceholderPage 
+          title="Contact Us" 
+          description="Our contact form is under construction. Please email us at info@theconcreteguyz.com.au or call 0400 000 000 for inquiries." 
+        />
+      </Route>
+
+      <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );
