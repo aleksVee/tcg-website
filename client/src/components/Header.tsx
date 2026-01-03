@@ -33,34 +33,32 @@ export default function Header() {
       )}
     >
       <div className="container flex items-center justify-between">
-        <Link href="/">
-          <a className="flex items-center gap-2 group">
-            {/* Logo used as-is without filters as requested */}
-            <img 
-              src="/images/TCGLogoOnlyTransparent.png" 
-              alt="The Concrete Guyz" 
-              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" 
-            />
-            <span className="font-display font-bold text-xl tracking-tight text-foreground hidden sm:block">
-              THE CONCRETE GUYZ
-            </span>
-          </a>
+        <Link href="/" className="flex items-center gap-2 group">
+          {/* Logo used as-is without filters as requested */}
+          <img 
+            src="/images/TCGLogoOnlyTransparent.png" 
+            alt="The Concrete Guyz" 
+            className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" 
+          />
+          <span className="font-display font-bold text-xl tracking-tight text-foreground hidden sm:block">
+            THE CONCRETE GUYZ
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link key={link.path} href={link.path}>
-              <a
-                className={cn(
-                  "text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-primary after:transition-all after:duration-300",
-                  location === link.path 
-                    ? "text-primary after:w-full" 
-                    : "text-foreground/80 after:w-0 hover:after:w-full"
-                )}
-              >
-                {link.name}
-              </a>
+            <Link 
+              key={link.path} 
+              href={link.path}
+              className={cn(
+                "text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-primary after:transition-all after:duration-300",
+                location === link.path 
+                  ? "text-primary after:w-full" 
+                  : "text-foreground/80 after:w-0 hover:after:w-full"
+              )}
+            >
+              {link.name}
             </Link>
           ))}
           <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold tracking-wider uppercase rounded-none border-2">
@@ -85,16 +83,16 @@ export default function Header() {
         )}
       >
         {navLinks.map((link) => (
-          <Link key={link.path} href={link.path}>
-            <a
-              className={cn(
-                "text-2xl font-display font-bold hover:text-primary transition-colors",
-                location === link.path ? "text-primary" : "text-foreground"
-              )}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {link.name}
-            </a>
+          <Link 
+            key={link.path} 
+            href={link.path}
+            className={cn(
+              "text-2xl font-display font-bold hover:text-primary transition-colors",
+              location === link.path ? "text-primary" : "text-foreground"
+            )}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            {link.name}
           </Link>
         ))}
         <Button 

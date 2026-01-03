@@ -44,10 +44,8 @@ export default function ServicesGrid() {
               Mastery in Every Pour
             </h2>
           </div>
-          <Link href="/services">
-            <a className="hidden md:flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest text-sm font-bold mt-6 md:mt-0">
-              View All Services <ArrowUpRight size={16} />
-            </a>
+          <Link href="/services" className="hidden md:flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest text-sm font-bold mt-6 md:mt-0">
+            View All Services <ArrowUpRight size={16} />
           </Link>
         </div>
 
@@ -77,20 +75,16 @@ export default function ServicesGrid() {
                 {service.description}
               </p>
               
-              <Link href={service.link}>
-                <a className="inline-block text-sm font-bold uppercase tracking-widest text-foreground border-b border-transparent group-hover:border-primary pb-1 transition-all">
-                  Explore
-                </a>
+              <Link href={service.link} className="inline-block text-sm font-bold uppercase tracking-widest text-foreground border-b border-transparent group-hover:border-primary pb-1 transition-all">
+                Explore
               </Link>
             </motion.div>
           ))}
         </div>
         
         <div className="mt-12 text-center md:hidden">
-          <Link href="/services">
-            <a className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-sm">
-              View All Services <ArrowUpRight size={16} />
-            </a>
+          <Link href="/services" className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-sm">
+            View All Services <ArrowUpRight size={16} />
           </Link>
         </div>
       </div>

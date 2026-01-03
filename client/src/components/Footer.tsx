@@ -7,14 +7,12 @@ export default function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
-            <Link href="/">
-              <a className="block mb-6">
-                <img 
-                  src="/images/TCGLogoOnlyTransparent.png" 
-                  alt="The Concrete Guyz" 
-                  className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity" 
-                />
-              </a>
+            <Link href="/" className="block mb-6">
+              <img 
+                src="/images/TCGLogoOnlyTransparent.png" 
+                alt="The Concrete Guyz" 
+                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity" 
+              />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-xs">
               Building legacies in concrete. Canberra's premium concreters delivering architectural foundations and furniture-grade artistry.
@@ -32,20 +30,20 @@ export default function Footer() {
           <div className="col-span-1">
             <h4 className="font-display font-bold text-lg mb-6 text-primary">Services</h4>
             <ul className="space-y-3">
-              <li><Link href="/portfolio"><a className="text-muted-foreground hover:text-primary transition-colors">Residential Driveways</a></Link></li>
-              <li><Link href="/portfolio"><a className="text-muted-foreground hover:text-primary transition-colors">Pool Decks & Surrounds</a></Link></li>
-              <li><Link href="/portfolio"><a className="text-muted-foreground hover:text-primary transition-colors">Commercial Projects</a></Link></li>
-              <li><Link href="/portfolio"><a className="text-muted-foreground hover:text-primary transition-colors">Artisanal Concrete</a></Link></li>
+              <li><Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">Residential Driveways</Link></li>
+              <li><Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">Pool Decks & Surrounds</Link></li>
+              <li><Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">Commercial Projects</Link></li>
+              <li><Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">Artisanal Concrete</Link></li>
             </ul>
           </div>
 
           <div className="col-span-1">
             <h4 className="font-display font-bold text-lg mb-6 text-primary">Company</h4>
             <ul className="space-y-3">
-              <li><Link href="/story"><a className="text-muted-foreground hover:text-primary transition-colors">Our Story</a></Link></li>
-              <li><Link href="/portfolio"><a className="text-muted-foreground hover:text-primary transition-colors">Portfolio</a></Link></li>
-              <li><Link href="/contact"><a className="text-muted-foreground hover:text-primary transition-colors">Contact Us</a></Link></li>
-              <li><Link href="/contact"><a className="text-muted-foreground hover:text-primary transition-colors">Request Quote</a></Link></li>
+              <li><Link href="/story" className="text-muted-foreground hover:text-primary transition-colors">Our Story</Link></li>
+              <li><Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">Portfolio</Link></li>
+              <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact Us</Link></li>
+              <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Request Quote</Link></li>
             </ul>
           </div>
 
