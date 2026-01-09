@@ -7,6 +7,10 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import PlaceholderPage from "./pages/PlaceholderPage";
+import Driveways from "./pages/services/Driveways";
+import PoolDecks from "./pages/services/PoolDecks";
+import Artisanal from "./pages/services/Artisanal";
+import Commercial from "./pages/services/Commercial";
 
 function Router() {
   return (
@@ -14,12 +18,14 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/portfolio" component={Portfolio} />
       
-      <Route path="/services">
-        <PlaceholderPage 
-          title="Our Services" 
-          description="Detailed information about our residential, commercial, and artisanal concrete services is coming soon. For now, please view our portfolio or contact us for a quote." 
-        />
-      </Route>
+      {/* Service Routes */}
+      <Route path="/services/driveways" component={Driveways} />
+      <Route path="/services/pool-decks" component={PoolDecks} />
+      <Route path="/services/artisanal" component={Artisanal} />
+      <Route path="/services/commercial" component={Commercial} />
+      
+      {/* Main Services Page (redirects to Driveways for now or acts as hub) */}
+      <Route path="/services" component={Driveways} />
       
       <Route path="/story">
         <PlaceholderPage 

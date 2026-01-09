@@ -8,28 +8,28 @@ const services = [
     title: "Residential Driveways",
     description: "Premium exposed aggregate and polished finishes that create a stunning first impression for your home.",
     icon: Home,
-    link: "/portfolio?category=residential"
+    link: "/services/driveways"
   },
   {
     id: 2,
     title: "Pool Decks & Surrounds",
     description: "Slip-resistant, luxury surfaces designed to enhance your outdoor living and entertainment areas.",
     icon: Layers,
-    link: "/portfolio?category=pool"
+    link: "/services/pool-decks"
   },
   {
     id: 3,
     title: "Commercial Projects",
     description: "Large-scale architectural concrete solutions for public spaces, entries, and commercial developments.",
     icon: Building2,
-    link: "/portfolio?category=commercial"
+    link: "/services/commercial"
   },
   {
     id: 4,
     title: "Artisanal Concrete",
     description: "Bespoke furniture-grade pieces including benchtops, basins, and fireplaces crafted with precision.",
     icon: Palette,
-    link: "/portfolio?category=artisanal"
+    link: "/services/artisanal"
   }
 ];
 
