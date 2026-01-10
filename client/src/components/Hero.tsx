@@ -8,6 +8,9 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex flex-col lg:flex-row overflow-hidden border-b border-border">
       {/* Left Content Side */}
       <div className="w-full lg:w-[45%] flex flex-col justify-center px-6 md:px-12 lg:px-20 py-20 lg:py-0 bg-background relative z-10">
+        {/* Subtle Grid Background */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.15] pointer-events-none"></div>
+        
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
