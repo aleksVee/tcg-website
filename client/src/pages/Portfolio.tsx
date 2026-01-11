@@ -101,8 +101,11 @@ export default function Portfolio() {
     <Layout>
       <div className="bg-background min-h-screen">
         {/* Header Section */}
-        <section className="py-20 border-b border-border bg-card">
-          <div className="container text-center">
+        <section className="py-20 border-b border-border bg-card relative overflow-hidden">
+          {/* Subtle Grid Background */}
+          <div className="absolute inset-0 bg-grid-pattern opacity-[0.20] pointer-events-none"></div>
+          
+          <div className="container text-center relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
