@@ -170,8 +170,16 @@
     background-size: 40px 40px;
     background-image: linear-gradient(to right, var(--color-border) 1px, transparent 1px),
                       linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
-    mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
-    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+    mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  }
+
+  @media (max-width: 768px) {
+    .bg-grid-pattern {
+      background-size: 30px 30px; /* Smaller grid for mobile */
+      mask-image: radial-gradient(circle at center, black 50%, transparent 90%); /* Wider mask for mobile */
+      -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 90%);
+    }
   }
 
   /**
