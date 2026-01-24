@@ -175,7 +175,7 @@ export default function QuoteRequest() {
                     <Label htmlFor="phone" className="text-foreground font-bold uppercase tracking-wider text-xs">Phone Number</Label>
                     <Input
                       id="phone"
-                      placeholder="0400 000 000"
+                      placeholder="0428 728 123"
                       {...register("phone")}
                       className="bg-background/80 border-input focus:border-primary focus:bg-background h-12 transition-all duration-300"
                     />
