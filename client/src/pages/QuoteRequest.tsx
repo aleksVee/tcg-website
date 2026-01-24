@@ -68,7 +68,7 @@ export default function QuoteRequest() {
             className="text-center mb-12 relative"
           >
             {/* Grid Pattern Background for Heading */}
-            <div className="absolute inset-0 bg-grid-pattern opacity-[0.20] pointer-events-none -z-10 transform scale-150"></div>
+            <div className="absolute inset-0 bg-grid-pattern opacity-[0.20] pointer-events-none"></div>
             <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">
               Start Your Project
             </span>
