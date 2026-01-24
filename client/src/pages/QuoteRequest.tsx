@@ -3,32 +3,57 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
-import { Upload, CheckCircle2, Loader2 } from "lucide-react";
+import { Upload, CheckCircle2, Loader2, ShieldCheck, Star } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import { cn } from "@/lib/utils";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
   email: z.string().email("Invalid email address"),
   phone: z.string().min(8, "Valid phone number is required"),
   location: z.string().min(2, "Job location is required"),
+  finishType: z.string().optional(),
   description: z.string().min(10, "Please provide a brief description of the job"),
 });
 
 type FormData = z.infer<typeof formSchema>;
 
+const finishOptions = [
+  {
+    id: "exposed",
+    name: "Exposed Aggregate",
+    image: "/images/textures/exposed_aggregate.jpg",
+    description: "Textured, durable, non-slip"
+  },
+  {
+    id: "honed",
+    name: "Honed Concrete",
+    image: "/images/textures/honed_concrete.jpg",
+    description: "Smooth matte finish, outdoor friendly"
+  },
+  {
+    id: "polished",
+    name: "Polished Concrete",
+    image: "/images/textures/polished_concrete.jpg",
+    description: "High-gloss, premium indoor finish"
+  }
+];
+
 export default function QuoteRequest() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedFinish, setSelectedFinish] = useState<string | null>(null);
 
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
     reset,
   } = useForm<FormData>({
@@ -39,6 +64,11 @@ export default function QuoteRequest() {
     if (e.target.files && e.target.files[0]) {
       setSelectedFile(e.target.files[0]);
     }
+  };
+
+  const handleFinishSelect = (finishId: string) => {
+    setSelectedFinish(finishId);
+    setValue("finishType", finishId);
   };
 
   const onSubmit = async (data: FormData) => {
@@ -55,6 +85,7 @@ export default function QuoteRequest() {
     toast.success("Quote request submitted successfully!");
     reset();
     setSelectedFile(null);
+    setSelectedFinish(null);
   };
 
   return (
@@ -167,6 +198,44 @@ export default function QuoteRequest() {
                   </div>
                 </div>
 
+                {/* Interactive Finish Selector */}
+                <div className="space-y-4">
+                  <Label className="text-foreground font-bold uppercase tracking-wider text-xs">Preferred Finish Style (Optional)</Label>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {finishOptions.map((finish) => (
+                      <div 
+                        key={finish.id}
+                        onClick={() => handleFinishSelect(finish.id)}
+                        className={cn(
+                          "relative group cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300",
+                          selectedFinish === finish.id 
+                            ? "border-primary ring-2 ring-primary/20" 
+                            : "border-transparent hover:border-primary/50"
+                        )}
+                      >
+                        <div className="aspect-square relative">
+                          <img 
+                            src={finish.image} 
+                            alt={finish.name}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                          <div className={cn(
+                            "absolute inset-0 bg-black/40 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center",
+                            selectedFinish === finish.id ? "bg-black/60" : "group-hover:bg-black/50"
+                          )}>
+                            {selectedFinish === finish.id && (
+                              <CheckCircle2 className="w-8 h-8 text-primary mb-2" />
+                            )}
+                            <span className="text-white font-bold font-display text-lg drop-shadow-md">{finish.name}</span>
+                            <span className="text-white/80 text-xs mt-1 drop-shadow-md">{finish.description}</span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <input type="hidden" {...register("finishType")} />
+                </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="description" className="text-foreground font-bold uppercase tracking-wider text-xs">Project Description</Label>
                   <Textarea
@@ -212,7 +281,7 @@ export default function QuoteRequest() {
                   <p className="text-[10px] text-muted-foreground/60 uppercase tracking-widest">JPG, PNG or PDF up to 10MB</p>
                 </div>
 
-                <div className="pt-4 flex justify-center">
+                <div className="pt-4 flex flex-col items-center gap-6">
                   <Button
                     type="submit"
                     disabled={isSubmitting}
@@ -227,6 +296,23 @@ export default function QuoteRequest() {
                       "Submit Quote Request"
                     )}
                   </Button>
+
+                  {/* Trust Badge */}
+                  <div className="flex items-center gap-6 text-muted-foreground/80 bg-muted/30 px-6 py-3 rounded-full border border-border/50">
+                    <div className="flex items-center gap-2">
+                      <ShieldCheck className="w-5 h-5 text-primary" />
+                      <span className="text-xs font-bold uppercase tracking-wider">Fully Licensed & Insured</span>
+                    </div>
+                    <div className="w-px h-4 bg-border"></div>
+                    <div className="flex items-center gap-2">
+                      <div className="flex">
+                        {[1, 2, 3, 4, 5].map((i) => (
+                          <Star key={i} className="w-3 h-3 text-primary fill-primary" />
+                        ))}
+                      </div>
+                      <span className="text-xs font-bold uppercase tracking-wider">Top Rated in Canberra</span>
+                    </div>
+                  </div>
                 </div>
               </form>
             )}
