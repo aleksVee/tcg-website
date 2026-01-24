@@ -174,10 +174,12 @@ export default function QuoteRequest() {
                   )}
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-4 flex flex-col items-center justify-center py-4">
                   <Label className="text-foreground font-bold uppercase tracking-wider text-xs">Upload Photo (Optional)</Label>
-                  <div className="border-2 border-dashed border-border rounded-lg p-8 text-center hover:border-primary/50 transition-colors cursor-pointer bg-background/50"
-                       onClick={() => document.getElementById('file-upload')?.click()}>
+                  <div 
+                    className="w-40 h-40 rounded-full border-2 border-dashed border-border hover:border-primary/50 transition-all duration-300 cursor-pointer bg-background/50 flex flex-col items-center justify-center gap-2 group relative overflow-hidden"
+                    onClick={() => document.getElementById('file-upload')?.click()}
+                  >
                     <input
                       id="file-upload"
                       type="file"
@@ -185,22 +187,23 @@ export default function QuoteRequest() {
                       className="hidden"
                       onChange={handleFileChange}
                     />
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center">
-                        <Upload className="w-6 h-6 text-muted-foreground" />
+                    
+                    {selectedFile ? (
+                      <div className="absolute inset-0 bg-primary/5 flex flex-col items-center justify-center p-4 text-center">
+                        <CheckCircle2 className="w-8 h-8 text-primary mb-2" />
+                        <span className="text-xs font-bold text-primary truncate w-full px-2">{selectedFile.name}</span>
+                        <span className="text-[10px] text-muted-foreground mt-1">Click to change</span>
                       </div>
-                      <div className="text-sm text-muted-foreground">
-                        {selectedFile ? (
-                          <span className="text-primary font-bold">{selectedFile.name}</span>
-                        ) : (
-                          <span>Click to upload site photos or plans</span>
-                        )}
-                      </div>
-                      <div className="text-xs text-muted-foreground/60">
-                        JPG, PNG or PDF up to 10MB
-                      </div>
-                    </div>
+                    ) : (
+                      <>
+                        <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                          <Upload className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                        </div>
+                        <span className="text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors">Upload Photo</span>
+                      </>
+                    )}
                   </div>
+                  <p className="text-[10px] text-muted-foreground/60 uppercase tracking-widest">JPG, PNG or PDF up to 10MB</p>
                 </div>
 
                 <div className="pt-4">
