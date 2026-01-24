@@ -207,27 +207,27 @@ export default function QuoteRequest() {
                         key={finish.id}
                         onClick={() => handleFinishSelect(finish.id)}
                         className={cn(
-                          "relative group cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300",
+                          "relative group cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 h-24",
                           selectedFinish === finish.id 
                             ? "border-primary ring-2 ring-primary/20" 
                             : "border-transparent hover:border-primary/50"
                         )}
                       >
-                        <div className="aspect-square relative">
+                        <div className="absolute inset-0">
                           <img 
                             src={finish.image} 
                             alt={finish.name}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                           <div className={cn(
-                            "absolute inset-0 bg-black/40 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center",
+                            "absolute inset-0 bg-black/40 transition-opacity duration-300 flex flex-col items-center justify-center p-2 text-center",
                             selectedFinish === finish.id ? "bg-black/60" : "group-hover:bg-black/50"
                           )}>
                             {selectedFinish === finish.id && (
-                              <CheckCircle2 className="w-8 h-8 text-primary mb-2" />
+                              <CheckCircle2 className="w-6 h-6 text-primary mb-1" />
                             )}
-                            <span className="text-white font-bold font-display text-lg drop-shadow-md">{finish.name}</span>
-                            <span className="text-white/80 text-xs mt-1 drop-shadow-md">{finish.description}</span>
+                            <span className="text-white font-bold font-display text-sm drop-shadow-md leading-tight">{finish.name}</span>
+                            <span className="text-white/80 text-[10px] mt-0.5 drop-shadow-md hidden sm:block">{finish.description}</span>
                           </div>
                         </div>
                       </div>
@@ -310,7 +310,7 @@ export default function QuoteRequest() {
                           <Star key={i} className="w-3 h-3 text-primary fill-primary" />
                         ))}
                       </div>
-                      <span className="text-xs font-bold uppercase tracking-wider">Top Rated in Canberra</span>
+                      <span className="text-xs font-bold uppercase tracking-wider">Highly Rated in Canberra</span>
                     </div>
                   </div>
                 </div>
