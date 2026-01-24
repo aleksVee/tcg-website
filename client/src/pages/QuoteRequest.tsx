@@ -201,13 +201,13 @@ export default function QuoteRequest() {
                 {/* Interactive Finish Selector */}
                 <div className="space-y-4">
                   <Label className="text-foreground font-bold uppercase tracking-wider text-xs">Preferred Finish Style (Optional)</Label>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
                     {finishOptions.map((finish) => (
                       <div 
                         key={finish.id}
                         onClick={() => handleFinishSelect(finish.id)}
                         className={cn(
-                          "relative group cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 h-24",
+                          "relative group cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 h-20 md:h-24",
                           selectedFinish === finish.id 
                             ? "border-primary ring-2 ring-primary/20" 
                             : "border-transparent hover:border-primary/50"
@@ -220,13 +220,13 @@ export default function QuoteRequest() {
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                           <div className={cn(
-                            "absolute inset-0 bg-black/40 transition-opacity duration-300 flex flex-col items-center justify-center p-2 text-center",
+                            "absolute inset-0 bg-black/40 transition-opacity duration-300 flex flex-col items-center justify-center p-1 md:p-2 text-center",
                             selectedFinish === finish.id ? "bg-black/60" : "group-hover:bg-black/50"
                           )}>
                             {selectedFinish === finish.id && (
-                              <CheckCircle2 className="w-6 h-6 text-primary mb-1" />
+                              <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-primary mb-0.5 md:mb-1" />
                             )}
-                            <span className="text-white font-bold font-display text-sm drop-shadow-md leading-tight">{finish.name}</span>
+                            <span className="text-white font-bold font-display text-xs md:text-sm drop-shadow-md leading-tight">{finish.name}</span>
                             <span className="text-white/80 text-[10px] mt-0.5 drop-shadow-md hidden sm:block">{finish.description}</span>
                           </div>
                         </div>
