@@ -78,7 +78,7 @@ export default function ServicePageTemplate({
                 ))}
               </div>
               <div className="mt-10">
-                <Link href="/contact">
+                <Link href="/quote">
                   <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-8 py-6 font-bold uppercase tracking-wider">
                     Get a Quote
                   </Button>

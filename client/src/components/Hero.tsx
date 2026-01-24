@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact">
+            <Link href="/quote">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-8 py-6 text-base font-bold tracking-wider uppercase transition-all hover:translate-y-[-2px]">
                 Request Consultation
               </Button>

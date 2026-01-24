@@ -11,6 +11,7 @@ import Driveways from "./pages/services/Driveways";
 import PoolDecks from "./pages/services/PoolDecks";
 import Artisanal from "./pages/services/Artisanal";
 import Commercial from "./pages/services/Commercial";
+import QuoteRequest from "./pages/QuoteRequest";
 
 function Router() {
   return (
@@ -41,6 +42,7 @@ function Router() {
         />
       </Route>
 
+      <Route path="/quote" component={QuoteRequest} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

@@ -61,9 +61,11 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold tracking-wider uppercase rounded-none border-2">
-            Get a Quote
-          </Button>
+          <Link href="/quote">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold tracking-wider uppercase rounded-none border-2">
+              Get a Quote
+            </Button>
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -95,13 +97,14 @@ export default function Header() {
             {link.name}
           </Link>
         ))}
-        <Button 
-          size="lg" 
-          className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-none font-bold tracking-wider uppercase"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
-          Get a Quote
-        </Button>
+        <Link href="/quote" onClick={() => setIsMobileMenuOpen(false)}>
+          <Button 
+            size="lg" 
+            className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-none font-bold tracking-wider uppercase"
+          >
+            Get a Quote
+          </Button>
+        </Link>
       </div>
     </header>
   );

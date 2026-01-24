@@ -12,7 +12,7 @@ export default function CTASection() {
         <p className="text-primary-foreground/80 text-xl max-w-2xl mx-auto mb-10 font-light">
           Contact us today for a consultation on your residential or commercial project. Experience the difference of premium craftsmanship.
         </p>
-        <Link href="/contact">
+        <Link href="/quote">
           <Button size="lg" className="bg-background text-foreground hover:bg-background/90 border-none rounded-none px-10 py-8 text-lg font-bold tracking-wider uppercase shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
             Request a Quote
           </Button>
