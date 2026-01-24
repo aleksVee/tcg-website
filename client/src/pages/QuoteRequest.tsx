@@ -65,8 +65,10 @@ export default function QuoteRequest() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-12 relative"
           >
+            {/* Grid Pattern Background for Heading */}
+            <div className="absolute inset-0 bg-grid-pattern opacity-[0.20] pointer-events-none -z-10 transform scale-150"></div>
             <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">
               Start Your Project
             </span>
