@@ -206,11 +206,11 @@ export default function QuoteRequest() {
                   <p className="text-[10px] text-muted-foreground/60 uppercase tracking-widest">JPG, PNG or PDF up to 10MB</p>
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-4 flex justify-center">
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full md:w-auto bg-primary text-primary-foreground hover:bg-primary/90 font-bold tracking-wider uppercase px-10 py-6 text-base"
+                    className="w-full md:w-auto bg-primary text-primary-foreground hover:bg-primary/90 font-bold tracking-wider uppercase px-12 py-6 text-base"
                   >
                     {isSubmitting ? (
                       <>
