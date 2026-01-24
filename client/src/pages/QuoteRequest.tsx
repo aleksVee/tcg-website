@@ -177,7 +177,7 @@ export default function QuoteRequest() {
                 <div className="space-y-4 flex flex-col items-center justify-center py-4">
                   <Label className="text-foreground font-bold uppercase tracking-wider text-xs">Upload Photo (Optional)</Label>
                   <div 
-                    className="w-40 h-40 rounded-full border-2 border-dashed border-border hover:border-primary/50 transition-all duration-300 cursor-pointer bg-background/50 flex flex-col items-center justify-center gap-2 group relative overflow-hidden"
+                    className="w-28 h-28 rounded-full border-2 border-dashed border-border hover:border-primary/50 transition-all duration-300 cursor-pointer bg-background/50 flex flex-col items-center justify-center gap-1 group relative overflow-hidden"
                     onClick={() => document.getElementById('file-upload')?.click()}
                   >
                     <input
@@ -196,10 +196,10 @@ export default function QuoteRequest() {
                       </div>
                     ) : (
                       <>
-                        <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                          <Upload className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                        <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                          <Upload className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                         </div>
-                        <span className="text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors">Upload Photo</span>
+                        <span className="text-[10px] font-medium text-muted-foreground group-hover:text-primary transition-colors">Upload Photo</span>
                       </>
                     )}
                   </div>
