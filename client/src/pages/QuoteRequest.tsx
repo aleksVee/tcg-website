@@ -70,13 +70,13 @@ export default function QuoteRequest() {
             {/* Grid Pattern Background for Heading */}
             <div className="absolute inset-0 bg-grid-pattern opacity-[0.30] pointer-events-none"></div>
             <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">
-              Start Your Project
+              Start your project
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
               Request a Quote
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Tell us about your vision. Whether it's a new driveway, a pool deck, or a custom architectural piece, we're here to bring it to life.
+              Tell us about your vision, we're here to bring it to life.
             </p>
           </motion.div>
 

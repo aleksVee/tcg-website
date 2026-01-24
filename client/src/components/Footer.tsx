@@ -12,6 +12,7 @@ export default function Footer() {
                 src="/images/TCGLogoOnlyTransparent.png" 
                 alt="The Concrete Guyz" 
                 className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity" 
+                style={{ paddingRight: "0px" }}
               />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-xs">

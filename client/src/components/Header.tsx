@@ -40,7 +40,7 @@ export default function Header() {
             alt="The Concrete Guyz" 
             className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" 
           />
-          <span className="font-display font-bold text-xl tracking-tight text-foreground hidden sm:block">
+          <span className="font-display font-bold text-xl tracking-tight text-foreground hidden sm:block" style={{ width: "215px", height: "32px" }}>
             THE CONCRETE GUYZ
           </span>
         </Link>
