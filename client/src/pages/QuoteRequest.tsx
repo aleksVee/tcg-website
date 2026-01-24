@@ -79,6 +79,10 @@ export default function QuoteRequest() {
           </motion.div>
 
           <div className="bg-card border border-border p-8 md:p-12 shadow-sm relative overflow-hidden">
+            {/* Gold Top Border Accent */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+            {/* Subtle Warm Background Tint */}
+            <div className="absolute inset-0 bg-primary/5 pointer-events-none"></div>
             {/* Grid Pattern Background */}
             <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none bg-grid-pattern"></div>
 
@@ -113,7 +117,7 @@ export default function QuoteRequest() {
                       id="name"
                       placeholder="John Doe"
                       {...register("name")}
-                      className="bg-background border-border h-12"
+                      className="bg-background/80 border-input focus:border-primary focus:bg-background h-12 transition-all duration-300"
                     />
                     {errors.name && (
                       <p className="text-destructive text-sm">{errors.name.message}</p>
@@ -127,7 +131,7 @@ export default function QuoteRequest() {
                       type="email"
                       placeholder="john@example.com"
                       {...register("email")}
-                      className="bg-background border-border h-12"
+                      className="bg-background/80 border-input focus:border-primary focus:bg-background h-12 transition-all duration-300"
                     />
                     {errors.email && (
                       <p className="text-destructive text-sm">{errors.email.message}</p>
@@ -140,7 +144,7 @@ export default function QuoteRequest() {
                       id="phone"
                       placeholder="0400 000 000"
                       {...register("phone")}
-                      className="bg-background border-border h-12"
+                      className="bg-background/80 border-input focus:border-primary focus:bg-background h-12 transition-all duration-300"
                     />
                     {errors.phone && (
                       <p className="text-destructive text-sm">{errors.phone.message}</p>
@@ -153,7 +157,7 @@ export default function QuoteRequest() {
                       id="location"
                       placeholder="Suburb or Address"
                       {...register("location")}
-                      className="bg-background border-border h-12"
+                      className="bg-background/80 border-input focus:border-primary focus:bg-background h-12 transition-all duration-300"
                     />
                     {errors.location && (
                       <p className="text-destructive text-sm">{errors.location.message}</p>
@@ -167,7 +171,7 @@ export default function QuoteRequest() {
                     id="description"
                     placeholder="Describe your project (e.g., exposed aggregate driveway, approx 50sqm...)"
                     {...register("description")}
-                    className="bg-background border-border min-h-[150px] resize-y"
+                    className="bg-background/80 border-input focus:border-primary focus:bg-background min-h-[150px] resize-y transition-all duration-300"
                   />
                   {errors.description && (
                     <p className="text-destructive text-sm">{errors.description.message}</p>
