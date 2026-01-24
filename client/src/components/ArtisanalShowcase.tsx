@@ -25,7 +25,7 @@ export default function ArtisanalShowcase() {
                 Beyond structural foundations, we specialize in bespoke architectural pieces. From polished benchtops to custom basins and fireplace surrounds, we treat concrete as a premium material for luxury interiors.
               </p>
               <ul className="space-y-4 mb-10">
-                {["Custom Kitchen Benchtops", "Architectural Basins", "Fireplace Surrounds", "Bespoke Furniture"].map((item, i) => (
+                {["Custom Kitchen Benchtops", "Architectural Basins", "Fireplace Surrounds and Exterior Benches", "Bespoke Furniture"].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-foreground">
                     <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                     <span className="font-light tracking-wide">{item}</span>
