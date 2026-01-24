@@ -38,7 +38,7 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {testimonials.map((item, index) => (
             <motion.div
               key={item.id}
@@ -58,6 +58,17 @@ export default function Testimonials() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center">
+          <a 
+            href="https://www.google.com/search?sca_esv=d866c615fc56355b&rlz=1C5OZZY_enAU1127AU1127&sxsrf=ANbL-n53eZv-wjX3L7Sq9SUwNmLb4uDm0Q:1769242414962&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOdnUsZPaRVEAtT5A9yTq5t1fySh6uPQBEeLbBd5t0Yp7wocNThXv3hWUY18sSbFBXjo8jEQxwSNhHK1doO4NTRFAoFw2E_xrVPWJ5JDC6tn3SJwbCw%3D%3D&q=The+Concrete+Guyz+Reviews&sa=X&ved=2ahUKEwjni6nN3aOSAxUSwzgGHbU4KhoQ0bkNegQIMRAF&biw=1512&bih=827&dpr=2&aic=0" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center h-12 px-8 bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300 font-bold tracking-wider uppercase text-sm"
+          >
+            See what others are saying about our work
+          </a>
         </div>
       </div>
     </section>
