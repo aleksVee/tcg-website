@@ -34,15 +34,12 @@ export default function Header() {
     >
       <div className="container flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          {/* Logo used as-is without filters as requested */}
+          {/* New Logo Implementation */}
           <img 
-            src="/images/TCGLogoOnlyTransparent.png" 
+            src="/images/logo_new.png" 
             alt="The Concrete Guyz" 
             className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" 
           />
-          <span className="font-display font-bold text-xl tracking-tight text-foreground hidden sm:block" style={{ width: "215px", height: "32px" }}>
-            THE CONCRETE GUYZ
-          </span>
         </Link>
 
         {/* Desktop Navigation */}
