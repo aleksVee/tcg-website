@@ -17,13 +17,7 @@ const services = [
     icon: Layers,
     link: "/services/pool-decks"
   },
-  {
-    id: 3,
-    title: "Commercial Projects",
-    description: "Large-scale architectural concrete solutions for public spaces, entries, and commercial developments.",
-    icon: Building2,
-    link: "/services/commercial"
-  },
+
   {
     id: 4,
     title: "Artisanal Concrete",
@@ -49,7 +43,7 @@ export default function ServicesGrid() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-border">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-border">
           {services.map((service, index) => (
             <motion.div
               key={service.id}

@@ -10,12 +10,14 @@ import PlaceholderPage from "./pages/PlaceholderPage";
 import Driveways from "./pages/services/Driveways";
 import PoolDecks from "./pages/services/PoolDecks";
 import Artisanal from "./pages/services/Artisanal";
-import Commercial from "./pages/services/Commercial";
+import ScrollToTop from "./components/ScrollToTop";
 import QuoteRequest from "./pages/QuoteRequest";
 
 function Router() {
   return (
-    <Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
       <Route path="/" component={Home} />
       <Route path="/portfolio" component={Portfolio} />
       
@@ -23,7 +25,7 @@ function Router() {
       <Route path="/services/driveways" component={Driveways} />
       <Route path="/services/pool-decks" component={PoolDecks} />
       <Route path="/services/artisanal" component={Artisanal} />
-      <Route path="/services/commercial" component={Commercial} />
+
       
       {/* Main Services Page (redirects to Driveways for now or acts as hub) */}
       <Route path="/services" component={Driveways} />
@@ -45,7 +47,8 @@ function Router() {
       <Route path="/quote" component={QuoteRequest} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
-    </Switch>
+      </Switch>
+    </>
   );
 }
 
