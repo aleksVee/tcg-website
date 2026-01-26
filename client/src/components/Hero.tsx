@@ -17,7 +17,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <span className="inline-block text-primary font-bold tracking-[0.2em] uppercase text-sm mb-6 border-b border-primary pb-2">
-            Canberra's Premium Concreters
+            Canberra's Trusted Concreters
           </span>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 text-foreground">
             Building <br />
