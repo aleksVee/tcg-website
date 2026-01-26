@@ -19,11 +19,8 @@ export default function Footer() {
               Building legacies in concrete. Canberra's premium concreters delivering architectural foundations and furniture-grade artistry.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/theconcreteguyz?igsh=d3F1cm9mY3loMGxs" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="text-foreground hover:text-primary transition-colors">
-                <Facebook size={20} />
               </a>
             </div>
           </div>
