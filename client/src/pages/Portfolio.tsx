@@ -75,21 +75,8 @@ const categories = [
 ];
 
 export default function Portfolio() {
-  const [filter, setFilter] = useState("all");
-  const [location] = useLocation();
-
-  // Handle query params for filtering
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const category = params.get("category");
-    if (category && categories.some(c => c.id === category)) {
-      setFilter(category);
-    }
-  }, [location]);
-
-  const filteredProjects = filter === "all" 
-    ? projects 
-    : projects.filter(project => project.category === filter);
+  // No filtering needed as requested
+  const filteredProjects = projects;
 
   return (
     <Layout>
@@ -116,25 +103,12 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Filter Controls */}
-        <section className="py-10 border-b border-border sticky top-20 z-30 bg-background/95 backdrop-blur-sm">
-          <div className="container overflow-x-auto">
-            <div className="flex flex-nowrap md:flex-wrap justify-center gap-4 min-w-max md:min-w-0 px-4 md:px-0">
-              {categories.map((cat) => (
-                <Button
-                  key={cat.id}
-                  variant={filter === cat.id ? "default" : "outline"}
-                  onClick={() => setFilter(cat.id)}
-                  className={`rounded-none px-6 py-2 font-bold tracking-wider uppercase transition-all ${
-                    filter === cat.id 
-                      ? "bg-primary text-primary-foreground hover:bg-primary/90 border-primary" 
-                      : "bg-transparent text-foreground border-border hover:border-primary hover:text-primary"
-                  }`}
-                >
-                  {cat.label}
-                </Button>
-              ))}
-            </div>
+        {/* All Projects Heading */}
+        <section className="py-10 border-b border-border bg-background">
+          <div className="container text-center">
+            <h2 className="font-display text-3xl font-bold text-foreground uppercase tracking-wide">
+              All Projects
+            </h2>
           </div>
         </section>
 
@@ -180,18 +154,7 @@ export default function Portfolio() {
               </AnimatePresence>
             </motion.div>
 
-            {filteredProjects.length === 0 && (
-              <div className="text-center py-20">
-                <p className="text-muted-foreground text-lg">No projects found in this category.</p>
-                <Button 
-                  variant="link" 
-                  onClick={() => setFilter("all")}
-                  className="text-primary mt-4"
-                >
-                  View all projects
-                </Button>
-              </div>
-            )}
+
           </div>
         </section>
 
