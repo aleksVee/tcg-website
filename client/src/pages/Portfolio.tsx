@@ -21,13 +21,7 @@ const projects = [
     image: "/images/portfolio_pool_deck.jpg",
     location: "Red Hill"
   },
-  {
-    id: 3,
-    title: "Corporate Plaza Entrance",
-    category: "commercial",
-    image: "/images/portfolio_commercial.jpg",
-    location: "Civic"
-  },
+
   {
     id: 4,
     title: "Bespoke Concrete Basin",
@@ -76,7 +70,7 @@ const categories = [
   { id: "all", label: "All Projects" },
   { id: "residential", label: "Residential" },
   { id: "pool", label: "Pool Decks" },
-  { id: "commercial", label: "Commercial" },
+
   { id: "artisanal", label: "Artisanal" }
 ];
 
