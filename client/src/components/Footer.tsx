@@ -9,9 +9,10 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="block mb-6">
               <img 
-                src="/images/logo_new.png" 
+                src="/images/TCGLogoOnlyTransparent.png" 
                 alt="The Concrete Guyz" 
                 className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity" 
+                style={{ paddingRight: "0px" }}
               />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-xs">
