@@ -26,6 +26,10 @@ export default function Artisanal() {
         {
           title: "Fireplace Surrounds",
           description: "Create a dramatic statement with a floor-to-ceiling concrete fireplace surround or a floating hearth."
+        },
+        {
+          title: "Exterior Fitouts & Benches",
+          description: "Custom outdoor seating, BBQ areas, and architectural landscape features designed to withstand the elements in style."
         }
       ]}
       galleryImages={[
