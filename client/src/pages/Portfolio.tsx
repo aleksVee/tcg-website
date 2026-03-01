@@ -11,14 +11,14 @@ const projects = [
     id: 1,
     title: "Modern Residence Driveway",
     category: "residential",
-    image: "/images/portfolio_residential.jpg",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_residential_fe297f7a.jpg",
     location: "Yarralumla"
   },
   {
     id: 2,
     title: "Infinity Pool Surround",
     category: "pool",
-    image: "/images/portfolio_pool_deck.jpg",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_pool_deck_f98b6989.jpg",
     location: "Red Hill"
   },
 
@@ -26,42 +26,42 @@ const projects = [
     id: 4,
     title: "Bespoke Concrete Basin",
     category: "artisanal",
-    image: "/images/artisanal_basin.jpg",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/artisanal_basin_d595354d.jpg",
     location: "Custom Commission"
   },
   {
     id: 5,
     title: "Polished Kitchen Island",
     category: "artisanal",
-    image: "/images/artisanal_benchtop.jpg",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/artisanal_benchtop_76878496.jpg",
     location: "Kingston"
   },
   {
     id: 6,
     title: "Garden Pathway",
     category: "residential",
-    image: "/images/portfolio_pathway.jpg",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_pathway_a7369dd8.jpg",
     location: "Deakin"
   },
   {
     id: 7,
     title: "Architectural Fireplace",
     category: "artisanal",
-    image: "/images/artisanal_fireplace.jpg",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/artisanal_fireplace_88277273.jpg",
     location: "Forrest"
   },
   {
     id: 8,
     title: "Outdoor Kitchen",
     category: "pool",
-    image: "/images/portfolio_outdoor_kitchen.jpg",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_outdoor_kitchen_86149060.jpg",
     location: "O'Malley"
   },
   {
     id: 9,
     title: "Custom Side Table",
     category: "artisanal",
-    image: "/images/portfolio_artisanal_furniture.jpg",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_artisanal_furniture_01f5ac21.jpg",
     location: "Showroom Piece"
   }
 ];

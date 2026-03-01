@@ -44,7 +44,7 @@ export default function ArtisanalShowcase() {
             <div className="grid grid-cols-2 gap-4">
               <motion.div
                 className="col-span-2 h-64 md:h-80 bg-cover bg-center relative group overflow-hidden"
-                style={{ backgroundImage: "url('/images/artisanal_benchtop.jpg')" }}
+                style={{ backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/artisanal_benchtop_76878496.jpg')" }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -54,7 +54,7 @@ export default function ArtisanalShowcase() {
               </motion.div>
               <motion.div
                 className="col-span-1 h-48 md:h-64 bg-cover bg-center relative group overflow-hidden"
-                style={{ backgroundImage: "url('/images/artisanal_basin.jpg')" }}
+                style={{ backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/artisanal_basin_d595354d.jpg')" }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -64,7 +64,7 @@ export default function ArtisanalShowcase() {
               </motion.div>
               <motion.div
                 className="col-span-1 h-48 md:h-64 bg-cover bg-center relative group overflow-hidden"
-                style={{ backgroundImage: "url('/images/artisanal_fireplace.jpg')" }}
+                style={{ backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/artisanal_fireplace_88277273.jpg')" }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

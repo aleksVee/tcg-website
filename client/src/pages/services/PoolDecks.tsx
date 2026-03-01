@@ -6,7 +6,7 @@ export default function PoolDecks() {
       title="Pool Decks & Surrounds"
       subtitle="Outdoor Living"
       description="Transform your pool area into a luxury resort-style retreat. Our concrete pool surrounds are designed with both safety and aesthetics in mind, offering slip-resistant finishes that stay cool underfoot. We work seamlessly with pool installers to ensure a perfect integration."
-      heroImage="/images/portfolio_pool_deck.jpg"
+      heroImage="https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_pool_deck_f98b6989.jpg"
       benefits={[
         "Slip-resistant safety finishes",
         "Seamless integration with pool coping",
@@ -29,9 +29,9 @@ export default function PoolDecks() {
         }
       ]}
       galleryImages={[
-        "/images/portfolio_pool_deck.jpg",
-        "/images/portfolio_outdoor_kitchen.jpg",
-        "/images/portfolio_residential.jpg"
+        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_pool_deck_f98b6989.jpg",
+        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_outdoor_kitchen_86149060.jpg",
+        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_residential_fe297f7a.jpg"
       ]}
     />
   );

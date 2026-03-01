@@ -64,7 +64,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/20 z-10"></div>
         <motion.div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero_driveway.jpg')" }}
+          style={{ backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/hero_driveway_8c71570c.jpg')" }}
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}

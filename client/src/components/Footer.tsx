@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="block mb-6">
               <img 
-                src="/images/TCGLogoOnlyTransparent.png" 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/TCGLogoOnlyTransparent_ba9bb423.png" 
                 alt="The Concrete Guyz" 
                 className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity" 
                 style={{ paddingRight: "0px" }}

@@ -36,7 +36,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 group">
           {/* Logo used as-is without filters as requested */}
           <img 
-            src="/images/TCGLogoOnlyTransparent.png" 
+            src="https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/TCGLogoOnlyTransparent_ba9bb423.png" 
             alt="The Concrete Guyz" 
             className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" 
           />

@@ -6,7 +6,7 @@ export default function Artisanal() {
       title="Artisanal Concrete"
       subtitle="Bespoke Interiors"
       description="Concrete is no longer just for foundations. We craft furniture-grade architectural pieces that serve as stunning focal points in your home. From custom kitchen benchtops to floating vanities and fireplace hearths, our artisanal work pushes the boundaries of what concrete can be."
-      heroImage="/images/artisanal_benchtop.jpg"
+      heroImage="https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/artisanal_benchtop_76878496.jpg"
       benefits={[
         "Completely custom shapes and sizes",
         "Unique textures and color variations",
@@ -33,9 +33,9 @@ export default function Artisanal() {
         }
       ]}
       galleryImages={[
-        "/images/artisanal_benchtop.jpg",
-        "/images/artisanal_basin.jpg",
-        "/images/artisanal_fireplace.jpg"
+        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/artisanal_benchtop_76878496.jpg",
+        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/artisanal_basin_d595354d.jpg",
+        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/artisanal_fireplace_88277273.jpg"
       ]}
     />
   );
