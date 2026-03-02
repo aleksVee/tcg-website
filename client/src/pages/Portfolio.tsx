@@ -17,7 +17,7 @@ const projects = [
   {
     id: 2,
     title: "Infinity Pool Surround",
-    category: "pool",
+    category: "garages",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_pool_deck_f98b6989.jpg",
     location: "Red Hill"
   },
@@ -53,7 +53,7 @@ const projects = [
   {
     id: 8,
     title: "Outdoor Kitchen",
-    category: "pool",
+    category: "garages",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_outdoor_kitchen_86149060.jpg",
     location: "O'Malley"
   },
@@ -69,7 +69,7 @@ const projects = [
 const categories = [
   { id: "all", label: "All Projects" },
   { id: "residential", label: "Residential" },
-  { id: "pool", label: "Pool Decks" },
+  { id: "garages", label: "Garages & Shed Slabs" },
 
   { id: "artisanal", label: "Artisanal" }
 ];

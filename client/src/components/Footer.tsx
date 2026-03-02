@@ -31,7 +31,7 @@ export default function Footer() {
               <li><Link href="/services/driveways" className="text-muted-foreground hover:text-primary transition-colors">Residential Driveways</Link></li>
               <li><Link href="/services/garages-sheds" className="text-muted-foreground hover:text-primary transition-colors">Garages & Shed Slabs</Link></li>
 
-              <li><Link href="/services/artisanal" className="text-muted-foreground hover:text-primary transition-colors">Artisanal Concrete</Link></li>
+              <li><Link href="/services/artisanal" className="text-muted-foreground hover:text-primary transition-colors">In-Situ & Bespoke Pieces</Link></li>
             </ul>
           </div>
 

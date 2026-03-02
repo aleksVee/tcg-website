@@ -29,7 +29,7 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <section className="py-24 bg-background relative">
+    <section id="services" className="py-24 bg-background relative">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="max-w-2xl">
