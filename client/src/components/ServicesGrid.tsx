@@ -12,15 +12,15 @@ const services = [
   },
   {
     id: 2,
-    title: "Pool Decks & Surrounds",
-    description: "Your pool area should be a sanctuary, not a slip hazard. We design and pour seamless, slip-resistant surrounds that blend safety with high-end aesthetics.",
+    title: "Garages and Shed Slabs",
+    description: "We pour durable, level, and high-strength concrete slabs for garages and sheds. Built to handle heavy loads and last for generations.",
     icon: Layers,
     link: "/services/pool-decks"
   },
 
   {
     id: 4,
-    title: "Artisanal Concrete",
+    title: "In-Situ & Bespoke Pieces",
     description: "Concrete isn't just for floors. We craft custom benchtops, fireplace hearths, and floating steps that serve as the centerpiece of your home. If you can dream it, we can pour it.",
     icon: Palette,
     link: "/services/artisanal"

@@ -4,21 +4,21 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    text: "The Concrete Guyz transformed our home entrance completely. The exposed aggregate finish is flawless, and the team's attention to detail was impressive. Truly premium workmanship.",
-    author: "James & Sarah M.",
-    location: "Yarralumla"
+    text: "Zac is so professional.. it is refreshing to know there are still people like him on this planet. Would i recommend him to someone I know. 100% ! As far as I am concerned he has my business for life.",
+    author: "Phil",
+    location: "Canberra"
   },
   {
     id: 2,
-    text: "We commissioned a custom concrete benchtop for our kitchen renovation. It's now the centerpiece of our home. The craftsmanship is undeniable - smooth, durable, and beautiful.",
-    author: "Michael T.",
-    location: "Kingston"
+    text: "Couldnt be happier with the service from Zac and team at The Concrete Guyz. The team took care of everything from removal of old driveways, to sourcing all materials and delivering a beautiful finish. From the time of my initial enquiry Zac gave me detailed explanations of the process and kept me updated throughout until completion while answering all my queries. They are a quality local business who i would recommend to anyone around Canberra. Cheers Concrete Guyz.",
+    author: "Josh M",
+    location: "Canberra"
   },
   {
     id: 3,
-    text: "Professional from start to finish. They understood our vision for the pool deck and executed it perfectly. The finish is exactly what we wanted - safe but sophisticated.",
-    author: "Elena R.",
-    location: "Red Hill"
+    text: "Zac is very professional and knowledgeable, he quickly understood our requirements an delivered and excellent result. Hihgly recommend Zac and his team to anyone requiring quality concreting job.",
+    author: "Alastair M",
+    location: "Canberra"
   }
 ];
 

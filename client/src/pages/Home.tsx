@@ -44,7 +44,6 @@ export default function Home() {
       </section>
 
       <ServicesGrid />
-      <ArtisanalShowcase />
       
       {/* Legacy Section */}
       <section className="py-20 bg-background border-b border-border">

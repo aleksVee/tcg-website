@@ -48,7 +48,7 @@ export default function Hero() {
           <div className="flex gap-8">
             <div className="flex flex-col">
               <span className="text-3xl font-display font-bold text-foreground">40+</span>
-              <span className="text-xs text-muted-foreground uppercase tracking-widest">Years Experience</span>
+              <span className="text-xs text-muted-foreground uppercase tracking-widest">Years Experience through 3 generations</span>
             </div>
             <div className="w-[1px] h-12 bg-border"></div>
             <div className="flex flex-col">
