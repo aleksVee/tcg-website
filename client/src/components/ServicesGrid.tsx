@@ -12,8 +12,8 @@ const services = [
   },
   {
     id: 2,
-    title: "Garages and Shed Slabs",
-    description: "We pour durable, level, and high-strength concrete slabs for garages and sheds. Built to handle heavy loads and last for generations.",
+    title: "Garages & Shed Slabs",
+    description: "level, reinforced slabs, carefully designed to carry the load of future structures.",
     icon: Layers,
     link: "/services/pool-decks"
   },
@@ -21,7 +21,7 @@ const services = [
   {
     id: 4,
     title: "In-Situ & Bespoke Pieces",
-    description: "Concrete isn't just for floors. We craft custom benchtops, fireplace hearths, and floating steps that serve as the centerpiece of your home. If you can dream it, we can pour it.",
+    description: "Architectural concrete features crafted on-site.",
     icon: Palette,
     link: "/services/artisanal"
   }
