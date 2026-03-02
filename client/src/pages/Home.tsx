@@ -60,7 +60,7 @@ export default function Home() {
               A Family Legacy of Excellence
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-              For over four decades, our family has been shaping the landscape of Canberra. Our reputation is built on quality, driving customers to us. Our work speaks for itself - built with care, finished with precision, and trusted by homeowners who expect it done right.
+              For over four decades, our family has been shaping the landscape of Canberra. We don't compete for work—our quality drives customers to us. When you choose The Concrete Guyz, you're choosing a partner who cares as much about your home as you do.
             </p>
           </motion.div>
         </div>

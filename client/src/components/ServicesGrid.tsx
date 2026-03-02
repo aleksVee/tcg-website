@@ -6,14 +6,14 @@ const services = [
   {
     id: 1,
     title: "Residential Driveways",
-    description: "Premium exposed aggregate and polished finishes that create a stunning first impression for your home.",
+    description: "We specialize in exposed aggregate and polished finishes that don't just look good—they last. A driveway isn't just a path; it's the first thing people see. We make sure it's unforgettable.",
     icon: Home,
     link: "/services/driveways"
   },
   {
     id: 2,
     title: "Pool Decks & Surrounds",
-    description: "Slip-resistant, luxury surfaces designed to enhance your outdoor living and entertainment areas.",
+    description: "Your pool area should be a sanctuary, not a slip hazard. We design and pour seamless, slip-resistant surrounds that blend safety with high-end aesthetics.",
     icon: Layers,
     link: "/services/pool-decks"
   },
@@ -21,7 +21,7 @@ const services = [
   {
     id: 4,
     title: "Artisanal Concrete",
-    description: "Bespoke furniture-grade pieces including benchtops, basins, and fireplaces crafted with precision.",
+    description: "Concrete isn't just for floors. We craft custom benchtops, fireplace hearths, and floating steps that serve as the centerpiece of your home. If you can dream it, we can pour it.",
     icon: Palette,
     link: "/services/artisanal"
   }
