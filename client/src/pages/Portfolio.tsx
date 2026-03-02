@@ -97,7 +97,7 @@ export default function Portfolio() {
                 Portfolio
               </h1>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Explore our collection of premium concrete projects, showcasing our dedication to quality, durability, and aesthetic excellence.
+                Explore our collection of concrete projects, showcasing our dedication to quality, durability, and aesthetic excellence.
               </p>
             </motion.div>
           </div>

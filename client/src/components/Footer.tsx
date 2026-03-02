@@ -58,7 +58,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-primary shrink-0" />
-                <a href="mailto:info@theconcreteguyz.com.au" className="text-muted-foreground hover:text-primary transition-colors">info@theconcreteguyz.com.au</a>
+                <a href="mailto:zac@theconcreteguyz.com.au" className="text-muted-foreground hover:text-primary transition-colors">zac@theconcreteguyz.com.au</a>
               </li>
             </ul>
           </div>

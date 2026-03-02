@@ -15,7 +15,7 @@ export default function PlaceholderPage({ title, description }: PlaceholderPageP
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.20] pointer-events-none"></div>
         
         <div className="relative z-10 flex flex-col items-center">
-          <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Coming Soon</span>
+          
           <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
             {title}
           </h1>
