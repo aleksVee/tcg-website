@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +17,37 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, link: { name: string, path: string, isScroll?: boolean }) => {
+    if (link.isScroll) {
+      e.preventDefault();
+      
+      // If we're not on the home page, navigate there first
+      if (location !== "/") {
+        setLocation("/");
+        // Wait for navigation to complete then scroll
+        setTimeout(() => {
+          const element = document.getElementById(link.path.substring(2)); // remove /#
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
+        // Already on home page, just scroll
+        const element = document.getElementById(link.path.substring(2)); // remove /#
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+      setIsMobileMenuOpen(false);
+    } else {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Portfolio", path: "/portfolio" },
-    { name: "Services", path: "/#services" },
+    { name: "Services", path: "/#services", isScroll: true },
     { name: "Our Story", path: "/story" },
     { name: "Contact", path: "/contact" },
   ];
@@ -39,6 +66,7 @@ export default function Header() {
             src="https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/TCGLogoOnlyTransparent_ba9bb423.png" 
             alt="The Concrete Guyz" 
             className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" 
+            style={{ paddingRight: "0px" }}
           />
           <span className="font-display font-bold text-xl tracking-tight text-foreground hidden sm:block" style={{ width: "215px", height: "32px" }}>
             THE CONCRETE GUYZ
@@ -48,18 +76,19 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link 
+            <a 
               key={link.path} 
               href={link.path}
+              onClick={(e) => handleNavClick(e, link)}
               className={cn(
-                "text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-primary after:transition-all after:duration-300",
+                "text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-primary after:transition-all after:duration-300 cursor-pointer",
                 location === link.path 
                   ? "text-primary after:w-full" 
                   : "text-foreground/80 after:w-0 hover:after:w-full"
               )}
             >
               {link.name}
-            </Link>
+            </a>
           ))}
           <Link href="/quote">
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold tracking-wider uppercase rounded-none border-2">
@@ -85,17 +114,17 @@ export default function Header() {
         )}
       >
         {navLinks.map((link) => (
-          <Link 
+          <a 
             key={link.path} 
             href={link.path}
+            onClick={(e) => handleNavClick(e, link)}
             className={cn(
-              "text-2xl font-display font-bold hover:text-primary transition-colors",
+              "text-2xl font-display font-bold hover:text-primary transition-colors cursor-pointer",
               location === link.path ? "text-primary" : "text-foreground"
             )}
-            onClick={() => setIsMobileMenuOpen(false)}
           >
             {link.name}
-          </Link>
+          </a>
         ))}
         <Link href="/quote" onClick={() => setIsMobileMenuOpen(false)}>
           <Button 
