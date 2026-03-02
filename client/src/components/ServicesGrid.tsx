@@ -38,9 +38,7 @@ export default function ServicesGrid() {
               Mastery in Every Pour
             </h2>
           </div>
-          <Link href="/services" className="hidden md:flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest text-sm font-bold mt-6 md:mt-0">
-            View All Services <ArrowUpRight size={16} />
-          </Link>
+          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-border">
@@ -76,11 +74,7 @@ export default function ServicesGrid() {
           ))}
         </div>
         
-        <div className="mt-12 text-center md:hidden">
-          <Link href="/services" className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-sm">
-            View All Services <ArrowUpRight size={16} />
-          </Link>
-        </div>
+        
       </div>
     </section>
   );
