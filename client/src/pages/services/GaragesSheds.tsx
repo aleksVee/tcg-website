@@ -11,21 +11,16 @@ export default function GaragesSheds() {
         "High-strength reinforced concrete",
         "Laser-level precision for flat surfaces",
         "Engineered for heavy load-bearing",
-        "Proper drainage and moisture control",
         "Durable, low-maintenance finish"
       ]}
       features={[
         {
-          title: "Reinforced Integrity",
-          description: "We use steel reinforcement and high-grade concrete mixes to ensure your slab can support vehicles, machinery, and structural weight without cracking."
+          title: "Controlled Placement & Finishing",
+          description: "From set-out to final trowel, we maintain tight level control to achieve consistent surfaces suited to garages, sheds, and structural builds."
         },
         {
-          title: "Precision Levelling",
-          description: "Using laser levels and expert screeding techniques, we guarantee a perfectly flat surface essential for construction and storage."
-        },
-        {
-          title: "Custom Edge Beams",
-          description: "Thickened edge beams provide additional structural support where it's needed most, ensuring the longevity of your building's perimeter."
+          title: "Engineer-Aligned Construction",
+          description: "Built in direct accordance with engineering drawings and structural specifications to guarantee compliance, strength, and durability."
         }
       ]}
       galleryImages={[
