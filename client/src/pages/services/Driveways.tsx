@@ -11,8 +11,7 @@ export default function Driveways() {
         "Increased property value and curb appeal",
         "Low maintenance and high durability",
         "Wide range of aggregate colors and finishes",
-        "Professional drainage solutions included",
-        "Structural integrity guarantee"
+        "Professional drainage solutions included"
       ]}
       features={[
         {
@@ -20,12 +19,12 @@ export default function Driveways() {
           description: "Our most popular finish, revealing the natural beauty of stone within the concrete. Slip-resistant and incredibly durable for high-traffic areas."
         },
         {
-          title: "Honed & Sealed",
-          description: "A smoother, matte finish that offers a sophisticated, contemporary look. Perfect for modern architectural homes."
+          title: "Concrete Tinting & Sealing",
+          description: "Revitalize your existing driveway with our tinting and sealing services. We can restore colour and protect your concrete, giving it a fresh look and extending its lifespan."
         },
         {
-          title: "Colored Concrete",
-          description: "Integral color mixed throughout the concrete, ensuring a rich, consistent tone that won't chip or fade over time."
+          title: "Coloured Concrete",
+          description: "Integral colour mixed throughout the concrete, ensuring a rich and consistent tone."
         }
       ]}
       galleryImages={[
