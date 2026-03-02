@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import Driveways from "./pages/services/Driveways";
-import PoolDecks from "./pages/services/PoolDecks";
+import GaragesSheds from "./pages/services/GaragesSheds";
 import Artisanal from "./pages/services/Artisanal";
 import ScrollToTop from "./components/ScrollToTop";
 import QuoteRequest from "./pages/QuoteRequest";
@@ -23,7 +23,7 @@ function Router() {
       
       {/* Service Routes */}
       <Route path="/services/driveways" component={Driveways} />
-      <Route path="/services/pool-decks" component={PoolDecks} />
+      <Route path="/services/garages-sheds" component={GaragesSheds} />
       <Route path="/services/artisanal" component={Artisanal} />
 
       

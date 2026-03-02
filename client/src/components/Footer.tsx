@@ -29,7 +29,7 @@ export default function Footer() {
             <h4 className="font-display font-bold text-lg mb-6 text-primary">Services</h4>
             <ul className="space-y-3">
               <li><Link href="/services/driveways" className="text-muted-foreground hover:text-primary transition-colors">Residential Driveways</Link></li>
-              <li><Link href="/services/pool-decks" className="text-muted-foreground hover:text-primary transition-colors">Pool Decks & Surrounds</Link></li>
+              <li><Link href="/services/garages-sheds" className="text-muted-foreground hover:text-primary transition-colors">Garages & Shed Slabs</Link></li>
 
               <li><Link href="/services/artisanal" className="text-muted-foreground hover:text-primary transition-colors">Artisanal Concrete</Link></li>
             </ul>

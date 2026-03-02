@@ -15,7 +15,7 @@ const services = [
     title: "Garages & Shed Slabs",
     description: "level, reinforced slabs, carefully designed to carry the load of future structures.",
     icon: Layers,
-    link: "/services/pool-decks"
+    link: "/services/garages-sheds"
   },
 
   {
