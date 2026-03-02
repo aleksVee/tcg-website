@@ -19,8 +19,8 @@ export default function Driveways() {
           description: "Our most popular finish, revealing the natural beauty of stone within the concrete. Slip-resistant and incredibly durable for high-traffic areas."
         },
         {
-          title: "Concrete Tinting & Sealing",
-          description: "Revitalize your existing driveway with our tinting and sealing services. We can restore colour and protect your concrete, giving it a fresh look and extending its lifespan."
+          title: "Tinting & Sealing",
+          description: "Revitalise your existing driveway with a tint and seal. We can restore, colour and protect your concrete, giving it a fresh look and extending its lifespan."
         },
         {
           title: "Coloured Concrete",
