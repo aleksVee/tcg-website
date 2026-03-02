@@ -6,7 +6,7 @@ const services = [
   {
     id: 1,
     title: "Residential Driveways",
-    description: "We specialize in exposed aggregate and polished finishes that don't just look good—they last. A driveway isn't just a path; it's the first thing people see. We make sure it's unforgettable.",
+    description: "Plain, coloured, and exposed aggregate driveways that create a stunning first impression of your home.",
     icon: Home,
     link: "/services/driveways"
   },
