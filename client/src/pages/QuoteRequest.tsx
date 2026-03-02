@@ -17,7 +17,7 @@ const formSchema = z.object({
   email: z.string().email("Invalid email address"),
   phone: z.string().min(8, "Valid phone number is required"),
   location: z.string().min(2, "Job location is required"),
-  finishType: z.string().optional(),
+
   description: z.string().min(10, "Please provide a brief description of the job"),
 });
 
@@ -48,7 +48,7 @@ export default function QuoteRequest() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [selectedFinish, setSelectedFinish] = useState<string | null>(null);
+
 
   const {
     register,
@@ -66,10 +66,7 @@ export default function QuoteRequest() {
     }
   };
 
-  const handleFinishSelect = (finishId: string) => {
-    setSelectedFinish(finishId);
-    setValue("finishType", finishId);
-  };
+
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
@@ -85,7 +82,7 @@ export default function QuoteRequest() {
     toast.success("Quote request submitted successfully!");
     reset();
     setSelectedFile(null);
-    setSelectedFinish(null);
+
   };
 
   return (
@@ -198,43 +195,7 @@ export default function QuoteRequest() {
                   </div>
                 </div>
 
-                {/* Interactive Finish Selector */}
-                <div className="space-y-4">
-                  <Label className="text-foreground font-bold uppercase tracking-wider text-xs">Preferred Finish Style (Optional)</Label>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-                    {finishOptions.map((finish) => (
-                      <div 
-                        key={finish.id}
-                        onClick={() => handleFinishSelect(finish.id)}
-                        className={cn(
-                          "relative group cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 h-20 md:h-24",
-                          selectedFinish === finish.id 
-                            ? "border-primary ring-2 ring-primary/20" 
-                            : "border-transparent hover:border-primary/50"
-                        )}
-                      >
-                        <div className="absolute inset-0">
-                          <img 
-                            src={finish.image} 
-                            alt={finish.name}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                          />
-                          <div className={cn(
-                            "absolute inset-0 bg-black/40 transition-opacity duration-300 flex flex-col items-center justify-center p-1 md:p-2 text-center",
-                            selectedFinish === finish.id ? "bg-black/60" : "group-hover:bg-black/50"
-                          )}>
-                            {selectedFinish === finish.id && (
-                              <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-primary mb-0.5 md:mb-1" />
-                            )}
-                            <span className="text-white font-bold font-display text-xs md:text-sm drop-shadow-md leading-tight">{finish.name}</span>
-                            <span className="text-white/80 text-[10px] mt-0.5 drop-shadow-md hidden sm:block">{finish.description}</span>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <input type="hidden" {...register("finishType")} />
-                </div>
+
 
                 <div className="space-y-2">
                   <Label htmlFor="description" className="text-foreground font-bold uppercase tracking-wider text-xs">Project Description</Label>
