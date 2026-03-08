@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export default function Footer() {
   return (
@@ -8,11 +9,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="block mb-6">
-              <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/TCGLogoOnlyTransparent_ba9bb423.png" 
-                alt="The Concrete Guyz" 
-                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity" 
-                style={{ paddingRight: "0px" }}
+              <img
+                src={logo}
+                alt="The Concrete Guyz"
+                className="h-18 w-auto opacity-80 hover:opacity-100 transition-opacity"
               />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-xs">

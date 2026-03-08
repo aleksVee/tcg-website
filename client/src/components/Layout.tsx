@@ -10,7 +10,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground font-body selection:bg-primary selection:text-primary-foreground">
       <Header />
-      <main className="flex-grow pt-20">
+      <main className="flex-grow">
         {children}
       </main>
       <Footer />

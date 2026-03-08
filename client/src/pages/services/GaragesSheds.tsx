@@ -1,4 +1,8 @@
 import ServicePageTemplate from "@/components/ServicePageTemplate";
+import bannerImg from "@/assets/garageSheds/shedsBanner.jpg";
+import project1 from "@/assets/garageSheds/shed1.jpg";
+import project2 from "@/assets/garageSheds/shed2.jpg";
+import project3 from "@/assets/garageSheds/shed3.jpg";
 
 export default function GaragesSheds() {
   return (
@@ -6,7 +10,7 @@ export default function GaragesSheds() {
       title="Garages & Shed Slabs"
       subtitle="Built for Strength"
       description="A solid structure starts with a solid foundation. We specialize in pouring high-strength, reinforced concrete slabs for garages, sheds, and workshops. Whether it's for heavy machinery, vehicle storage, or a backyard workshop, our slabs are engineered to handle the load and built to last for generations."
-      heroImage="https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_residential_fe297f7a.jpg"
+      heroImage={bannerImg}
       benefits={[
         "High-strength reinforced concrete",
         "Laser-level precision for flat surfaces",
@@ -24,9 +28,9 @@ export default function GaragesSheds() {
         }
       ]}
       galleryImages={[
-        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_residential_fe297f7a.jpg",
-        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_pool_deck_f98b6989.jpg",
-        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_outdoor_kitchen_86149060.jpg"
+        project1,
+        project2,
+        project3
       ]}
     />
   );

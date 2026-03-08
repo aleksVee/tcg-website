@@ -2,15 +2,16 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import homeImg from "@/assets/homeImg.jpg";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex flex-col lg:flex-row overflow-hidden border-b border-border">
       {/* Left Content Side */}
-      <div className="w-full lg:w-[45%] flex flex-col justify-center px-6 md:px-12 lg:px-20 py-20 lg:py-0 bg-background relative z-10">
+      <div className="w-full lg:w-[45%] flex flex-col justify-center py-20 lg:py-0 bg-background relative z-10 container">
         {/* Subtle Grid Background */}
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.20] pointer-events-none"></div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,7 +28,7 @@ export default function Hero() {
           <p className="text-muted-foreground text-lg md:text-xl max-w-md mb-10 leading-relaxed font-light">
             We don't just pour concrete. We craft architectural foundations that elevate your home's value and aesthetic for decades.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/quote">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-8 py-6 text-base font-bold tracking-wider uppercase transition-all hover:translate-y-[-2px]">
@@ -62,16 +63,16 @@ export default function Hero() {
       {/* Right Image Side */}
       <div className="w-full lg:w-[55%] relative min-h-[50vh] lg:min-h-full bg-muted">
         <div className="absolute inset-0 bg-black/20 z-10"></div>
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/hero_driveway_8c71570c.jpg')" }}
+          style={{ backgroundImage: `url(${homeImg})` }}
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         />
-        
+
         {/* Floating Badge */}
-        <motion.div 
+        <motion.div
           className="absolute bottom-10 right-10 z-20 bg-background/90 backdrop-blur-md p-6 border border-border max-w-xs hidden md:block"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}

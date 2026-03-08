@@ -1,4 +1,8 @@
 import ServicePageTemplate from "@/components/ServicePageTemplate";
+import bannerImg from "@/assets/luxuryDriveways/luxuryDrivewaysBanner.jpg";
+import project1 from "@/assets/luxuryDriveways/luxuryDriveways1.jpg";
+import project2 from "@/assets/luxuryDriveways/luxuryDriveways2.jpg";
+import project3 from "@/assets/luxuryDriveways/luxuryDriveways3.jpg";
 
 export default function Driveways() {
   return (
@@ -6,7 +10,7 @@ export default function Driveways() {
       title="Luxury Driveways"
       subtitle="Residential Concrete"
       description="Your driveway is the first thing people see when they visit your home. We specialize in creating stunning, durable concrete driveways that enhance your property's curb appeal and value. From exposed aggregate to honed finishes, our driveways are engineered to withstand the elements while looking immaculate."
-      heroImage="https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/hero_driveway_8c71570c.jpg"
+      heroImage={bannerImg}
       benefits={[
         "Increased property value and curb appeal",
         "Low maintenance and high durability",
@@ -28,9 +32,9 @@ export default function Driveways() {
         }
       ]}
       galleryImages={[
-        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/hero_driveway_8c71570c.jpg",
-        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_residential_fe297f7a.jpg",
-        "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio_pathway_a7369dd8.jpg"
+        project1,
+        project2,
+        project3
       ]}
     />
   );

@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +21,7 @@ export default function Header() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, link: { name: string, path: string, isScroll?: boolean }) => {
     if (link.isScroll) {
       e.preventDefault();
-      
+
       // If we're not on the home page, navigate there first
       if (location !== "/") {
         setLocation("/");
@@ -54,56 +55,55 @@ export default function Header() {
 
   return (
     <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-        isScrolled ? "bg-background/95 backdrop-blur-sm border-border py-2" : "bg-transparent py-6"
-      )}
+      className="relative z-50 bg-background py-1 transition-all duration-300"
     >
-      <div className="container flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          {/* Logo used as-is without filters as requested */}
-          <img 
-            src="https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/TCGLogoOnlyTransparent_ba9bb423.png" 
-            alt="The Concrete Guyz" 
-            className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" 
-            style={{ paddingRight: "0px" }}
+      <div className=" lg:max-w-[91%] mx-auto flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3 group">
+          {/* Local logo asset with clean transparency - resized for impact */}
+          <img
+            src={logo}
+            alt="The Concrete Guyz"
+            className="h-16 md:h-18 w-auto transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="font-display font-bold text-xl tracking-tight text-foreground hidden sm:block" style={{ width: "215px", height: "32px" }}>
+          <span className="font-display font-bold text-xl md:text-2xl tracking-tight text-foreground hidden sm:block">
             THE CONCRETE GUYZ
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a 
-              key={link.path} 
-              href={link.path}
-              onClick={(e) => handleNavClick(e, link)}
-              className={cn(
-                "text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-primary after:transition-all after:duration-300 cursor-pointer",
-                location === link.path 
-                  ? "text-primary after:w-full" 
-                  : "text-foreground/80 after:w-0 hover:after:w-full"
-              )}
-            >
-              {link.name}
-            </a>
-          ))}
-          <Link href="/quote">
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold tracking-wider uppercase rounded-none border-2">
-              Get a Quote
-            </Button>
-          </Link>
-        </nav>
+        {/* Navigation Group (Desktop & Mobile Toggle) */}
+        <div className="flex items-center">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.path}
+                href={link.path}
+                onClick={(e) => handleNavClick(e, link)}
+                className={cn(
+                  "text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-primary after:transition-all after:duration-300 cursor-pointer",
+                  location === link.path
+                    ? "text-primary after:w-full"
+                    : "text-foreground/80 after:w-0 hover:after:w-full"
+                )}
+              >
+                {link.name}
+              </a>
+            ))}
+            <Link href="/quote">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold tracking-wider uppercase rounded-none border-2">
+                Get a Quote
+              </Button>
+            </Link>
+          </nav>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-foreground p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden text-foreground p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation Overlay */}
@@ -114,8 +114,8 @@ export default function Header() {
         )}
       >
         {navLinks.map((link) => (
-          <a 
-            key={link.path} 
+          <a
+            key={link.path}
             href={link.path}
             onClick={(e) => handleNavClick(e, link)}
             className={cn(
@@ -127,8 +127,8 @@ export default function Header() {
           </a>
         ))}
         <Link href="/quote" onClick={() => setIsMobileMenuOpen(false)}>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-none font-bold tracking-wider uppercase"
           >
             Get a Quote

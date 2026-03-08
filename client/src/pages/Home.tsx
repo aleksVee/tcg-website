@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-      
+
       {/* Value Proposition Section */}
       <section className="py-20 bg-card border-b border-border">
         <div className="container">
@@ -29,7 +29,7 @@ export default function Home() {
               </motion.div>
             </div>
             <div className="w-full md:w-1/2">
-              <motion.p 
+              <motion.p
                 className="text-muted-foreground text-lg leading-relaxed"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -44,7 +44,7 @@ export default function Home() {
       </section>
 
       <ServicesGrid />
-      
+
       {/* Legacy Section */}
       <section className="py-20 bg-background border-b border-border">
         <div className="container text-center">
