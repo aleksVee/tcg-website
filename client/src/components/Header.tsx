@@ -65,7 +65,7 @@ export default function Header() {
             alt="The Concrete Guyz"
             className="h-16 md:h-18 w-auto transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="font-display font-bold text-xl md:text-2xl tracking-tight text-foreground hidden sm:block">
+          <span className="font-display font-bold text-xl md:text-[26px] tracking-tight text-foreground hidden sm:block">
             THE CONCRETE GUYZ
           </span>
         </Link>
