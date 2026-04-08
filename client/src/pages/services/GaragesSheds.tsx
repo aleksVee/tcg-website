@@ -1,8 +1,8 @@
 import ServicePageTemplate from "@/components/ServicePageTemplate";
-import bannerImg from "@/assets/garageSheds/shedsBanner.jpg";
-import project1 from "@/assets/garageSheds/shed1.jpg";
-import project2 from "@/assets/garageSheds/shed2.jpg";
-import project3 from "@/assets/garageSheds/shed3.jpg";
+const bannerImg = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/shedsBanner_09173f46.jpg";
+const project1 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/shed1_fb62c7ae.jpg";
+const project2 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/shed2_0bffd658.jpg";
+const project3 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/shed3_6c2fb5c9.jpg";
 
 export default function GaragesSheds() {
   return (

@@ -7,14 +7,14 @@ import CTASection from "@/components/CTASection";
 import { Instagram } from "lucide-react";
 
 // Local Portfolio Images
-import portfolio1 from "@/assets/portfolio/portfolio1.jpg";
-import portfolio3 from "@/assets/portfolio/portfolio3.jpg";
-import portfolio4 from "@/assets/portfolio/portfolio4.jpg";
-import portfolio6 from "@/assets/portfolio/portfolio6.jpg";
-import portfolio8 from "@/assets/portfolio/portfolio8.jpg";
-import drivewayImg from "@/assets/portfolio/modernResidenceDriveway.png";
-import poolImg from "@/assets/portfolio/pool.jpg";
-import pathwayImg from "@/assets/portfolio/gardenPathway.jpg";
+const portfolio1 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio1_13afafa6.jpg";
+const portfolio3 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio3_21368365.jpg";
+const portfolio4 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio4_5f1d726a.jpg";
+const portfolio6 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio6_1774f49d.jpg";
+const portfolio8 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio8_7b22ad75.jpg";
+const drivewayImg = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/modernResidenceDriveway_db0d3a46.png";
+const poolImg = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/pool_62e4e47d.jpg";
+const pathwayImg = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/gardenPathway_2809b505.jpg";
 
 // Portfolio Data
 const projects = [

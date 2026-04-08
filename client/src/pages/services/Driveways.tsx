@@ -1,8 +1,8 @@
 import ServicePageTemplate from "@/components/ServicePageTemplate";
-import bannerImg from "@/assets/luxuryDriveways/luxuryDrivewaysBanner.jpg";
-import project1 from "@/assets/luxuryDriveways/luxuryDriveways1.jpg";
-import project2 from "@/assets/luxuryDriveways/luxuryDriveways2.jpg";
-import project3 from "@/assets/luxuryDriveways/luxuryDriveways3.jpg";
+const bannerImg = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/luxuryDrivewaysBanner_4424f966.jpg";
+const project1 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/luxuryDriveways1_0b4b5bb4.jpg";
+const project2 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/luxuryDriveways2_263d473d.jpg";
+const project3 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/luxuryDriveways3_7b8c3925.jpg";
 
 export default function Driveways() {
   return (

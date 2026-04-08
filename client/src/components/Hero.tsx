@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import homeImg from "@/assets/homeImg.jpg";
+const homeImg = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/homeImg_24d4dda5.jpg";
 
 export default function Hero() {
   return (

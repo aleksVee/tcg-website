@@ -57,8 +57,16 @@ export default function Header() {
     <header
       className="relative z-50 bg-background py-1 transition-all duration-300"
     >
-      <div className=" lg:max-w-[91%] mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
+      <div className=" lg:max-w-[91%] mx-auto flex items-center justify-between relative">
+        {/* Mobile Menu Toggle (Left on mobile, hidden on desktop) */}
+        <button
+          className="md:hidden text-foreground p-2 absolute left-4"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        <Link href="/" className="flex items-center gap-3 group mx-auto md:mx-0">
           {/* Local logo asset with clean transparency - resized for impact */}
           <img
             src={logo}
@@ -70,7 +78,7 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Navigation Group (Desktop & Mobile Toggle) */}
+        {/* Navigation Group (Desktop) */}
         <div className="flex items-center">
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -96,13 +104,7 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden text-foreground p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+
         </div>
       </div>
 
