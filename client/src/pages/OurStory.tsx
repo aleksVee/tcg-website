@@ -35,7 +35,7 @@ export default function OurStory() {
               transition={{ duration: 0.6 }}
               className="prose prose-lg md:prose-xl prose-stone mx-auto text-foreground/80"
             >
-              <p className="lead text-2xl font-display text-foreground mb-8">
+              <p className="lead text-2xl text-foreground mb-8">
                 The Concrete Guyz is a small, family-run business built on over 50 years of construction experience, passed down through three generations.
               </p>
               
