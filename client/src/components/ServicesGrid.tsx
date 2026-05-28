@@ -43,34 +43,35 @@ export default function ServicesGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-border">
           {services.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="group border-r border-b border-border p-8 md:p-10 hover:bg-card transition-colors duration-300 relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <ArrowUpRight className="text-primary" />
-              </div>
-              
-              <div className="mb-6 text-primary">
-                <service.icon size={40} strokeWidth={1.5} />
-              </div>
-              
-              <h3 className="font-display text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                {service.description}
-              </p>
-              
-              <Link href={service.link} className="inline-block text-sm font-bold uppercase tracking-widest text-foreground border-b border-transparent group-hover:border-primary pb-1 transition-all">
-                Explore
-              </Link>
-            </motion.div>
+            <Link key={service.id} href={service.link}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="group border-r border-b border-border p-8 md:p-10 hover:bg-card transition-colors duration-300 relative overflow-hidden h-full cursor-pointer"
+              >
+                <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ArrowUpRight className="text-primary" />
+                </div>
+                
+                <div className="mb-6 text-primary">
+                  <service.icon size={40} strokeWidth={1.5} />
+                </div>
+                
+                <h3 className="font-display text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  {service.description}
+                </p>
+                
+                <span className="inline-block text-sm font-bold uppercase tracking-widest text-foreground border-b border-transparent group-hover:border-primary pb-1 transition-all">
+                  Explore
+                </span>
+              </motion.div>
+            </Link>
           ))}
         </div>
         
