@@ -27,7 +27,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Infinity Pool Surround",
+    title: "Pool Surround",
     category: "garages",
     image: poolImg,
     location: "Red Hill"
@@ -35,7 +35,7 @@ const projects = [
 
   {
     id: 4,
-    title: "Bespoke Concrete Basin",
+    title: "Segmented Off Form Retaining Wall",
     category: "artisanal",
     image: portfolio1,
     location: "Custom Commission"
@@ -49,28 +49,28 @@ const projects = [
   },
   {
     id: 6,
-    title: "Garden Pathway",
+    title: "Exposed Aggregate - Jugiong Stone",
     category: "residential",
     image: pathwayImg,
     location: "Deakin"
   },
   {
     id: 7,
-    title: "Architectural Fireplace",
+    title: "5% Black Oxide, Cross Broom Finish",
     category: "artisanal",
     image: portfolio4,
     location: "Forrest"
   },
   {
     id: 8,
-    title: "Outdoor Kitchen",
+    title: "5% Black Oxide - Fish Scale Cove",
     category: "garages",
     image: portfolio6,
     location: "O'Malley"
   },
   {
     id: 9,
-    title: "Custom Side Table",
+    title: "3% Fox Red - Broom Finish",
     category: "artisanal",
     image: portfolio8,
     location: "Showroom Piece"
