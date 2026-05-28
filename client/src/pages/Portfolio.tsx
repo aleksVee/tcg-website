@@ -8,7 +8,7 @@ import { Instagram } from "lucide-react";
 
 // Local Portfolio Images
 const portfolio1 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio1_13afafa6.jpg";
-const portfolio3 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio3_21368365.jpg";
+const portfolio3 = "/manus-storage/Swirlcove_4fdf9077.jpg";
 const portfolio4 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio4_5f1d726a.jpg";
 const portfolio6 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio6_1774f49d.jpg";
 const portfolio8 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio8_7b22ad75.jpg";
@@ -42,7 +42,7 @@ const projects = [
   },
   {
     id: 5,
-    title: "Polished Kitchen Island",
+    title: "5% Black - Swirl Cove",
     category: "artisanal",
     image: portfolio3,
     location: "Kingston"
