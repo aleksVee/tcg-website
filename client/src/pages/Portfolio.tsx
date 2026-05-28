@@ -12,7 +12,7 @@ const portfolio3 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsx
 const portfolio4 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio4_5f1d726a.jpg";
 const portfolio6 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio6_1774f49d.jpg";
 const portfolio8 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/portfolio8_7b22ad75.jpg";
-const drivewayImg = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/modernResidenceDriveway_db0d3a46.png";
+const drivewayImg = "/manus-storage/Burnishedwarehousefloor_7f72fea8.jpg";
 const poolImg = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/pool_62e4e47d.jpg";
 const pathwayImg = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnnXj75PoC/gardenPathway_2809b505.jpg";
 
@@ -20,7 +20,7 @@ const pathwayImg = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsx
 const projects = [
   {
     id: 1,
-    title: "Modern Residence Driveway",
+    title: "Burnished Warehouse Floor",
     category: "residential",
     image: drivewayImg,
     location: "Yarralumla"
