@@ -7,7 +7,6 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import PlaceholderPage from "./pages/PlaceholderPage";
-import OurStory from "./pages/OurStory";
 import Driveways from "./pages/services/Driveways";
 import GaragesSheds from "./pages/services/GaragesSheds";
 import Artisanal from "./pages/services/Artisanal";
@@ -31,7 +30,12 @@ function Router() {
       {/* Main Services Page (redirects to Driveways for now or acts as hub) */}
       <Route path="/services" component={Driveways} />
       
-      <Route path="/story" component={OurStory} />
+      <Route path="/story">
+        <PlaceholderPage 
+          title="Our Story" 
+          description="The 40+ year history of The Concrete Guyz is being documented. Check back soon to learn about our family legacy and commitment to Canberra." 
+        />
+      </Route>
       
       <Route path="/contact">
         <PlaceholderPage 
