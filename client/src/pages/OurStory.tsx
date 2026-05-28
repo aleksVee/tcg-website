@@ -1,6 +1,8 @@
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import CTASection from "@/components/CTASection";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function OurStory() {
   return (
@@ -50,6 +52,19 @@ export default function OurStory() {
               <p className="mb-12">
                 Today, that foundation is reflected in every project - combining practical construction knowledge with a clean, well-executed finish.
               </p>
+              
+              <div className="flex gap-4 justify-center mt-12">
+                <Link href="/">
+                  <Button variant="outline" className="rounded-none px-8 py-6 font-bold uppercase tracking-wider">
+                    Back Home
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none px-8 py-6 font-bold uppercase tracking-wider">
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>
