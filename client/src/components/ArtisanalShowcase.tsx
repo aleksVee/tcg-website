@@ -22,7 +22,7 @@ export default function ArtisanalShowcase() {
                 <span className="italic text-muted-foreground">as Art</span>
               </h2>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Beyond structural foundations, we specialize in bespoke architectural pieces. From polished benchtops to custom basins and fireplace surrounds, we treat concrete as a premium material for luxury interiors.
+                Beyond structural foundations, we specialise in bespoke architectural pieces. From polished benchtops to custom basins and fireplace surrounds, we treat concrete as a premium material for luxury interiors.
               </p>
               <ul className="space-y-4 mb-10">
                 {["Custom Kitchen Benchtops", "Architectural Basins", "Fireplace Surrounds and Exterior Benches", "Bespoke Furniture"].map((item, i) => (

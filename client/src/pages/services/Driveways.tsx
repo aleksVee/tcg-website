@@ -9,7 +9,7 @@ export default function Driveways() {
     <ServicePageTemplate
       title="Luxury Driveways"
       subtitle="Residential Concrete"
-      description="Your driveway is the first thing people see when they visit your home. We specialize in creating stunning, durable concrete driveways that enhance your property's curb appeal and value. From exposed aggregate to honed finishes, our driveways are engineered to withstand the elements while looking immaculate."
+      description="Your driveway is the first thing people see when they visit your home. We specialise in creating stunning, durable concrete driveways that enhance your property's curb appeal and value. From exposed aggregate to coloured concrete, our driveways are engineered to withstand the elements while looking immaculate."
       heroImage={bannerImg}
       benefits={[
         "Increased property value and curb appeal",
