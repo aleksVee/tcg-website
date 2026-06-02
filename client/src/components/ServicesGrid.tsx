@@ -5,7 +5,7 @@ import { Link } from "wouter";
 const services = [
   {
     id: 1,
-    title: "Residential Driveways",
+    title: "Driveways & Hardscapes",
     description: "Plain, coloured, and exposed aggregate driveways that create a stunning first impression of your home.",
     icon: Home,
     link: "/services/driveways"

@@ -7,8 +7,8 @@ const project3 = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAn
 export default function Driveways() {
   return (
     <ServicePageTemplate
-      title="Luxury Driveways"
-      subtitle="Residential Concrete"
+      title="Driveways & Hardscapes"
+      subtitle="Concrete Driveways"
       description="Your driveway is the first thing people see when they visit your home. We specialise in creating stunning, durable concrete driveways that enhance your property's kerb appeal and value. From exposed aggregate to coloured concrete, our driveways are engineered to withstand the elements while looking immaculate."
       heroImage={bannerImg}
       benefits={[
