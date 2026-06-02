@@ -102,7 +102,7 @@ export default function ServicePageTemplate({
       <section className="py-20 bg-card">
         <div className="container">
           <div className="text-center mb-12">
-            <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Visual Excellence</span>
+            <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Crafted in Concrete</span>
             <h2 className="font-display text-4xl font-bold text-foreground">Recent Projects</h2>
           </div>
           
