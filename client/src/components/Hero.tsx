@@ -26,7 +26,7 @@ export default function Hero() {
             in Concrete
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-md mb-10 leading-relaxed font-light">
-            We don't just pour concrete. We craft architectural foundations that elevate your home's value and aesthetic for decades.
+            We don't just pour concrete. We craft residential and architectural hardscapes that add value, function and character to your home.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
