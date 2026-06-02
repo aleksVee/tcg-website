@@ -137,7 +137,7 @@ export default function QuoteRequest() {
                   Request Received!
                 </h3>
                 <p className="text-muted-foreground text-lg mb-8 max-w-md mx-auto">
-                  Thank you for reaching out. Our team will review your details and get back to you within 24-48 hours to discuss your project.
+                  Thank you for reaching out. We will review your request and be in touch to discuss your project.
                 </p>
                 <Button
                   onClick={() => setIsSuccess(false)}
