@@ -36,7 +36,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                At The Concrete Guyz, we believe that concrete is the silent backbone of architectural beauty. It's not just about pouring a slab; it's about creating a durable, aesthetically pleasing surface that enhances your property's value and stands the test of time. Our 40+ year legacy is built on this philosophy.
+                Backed by more than 40 years of family construction experience, we approach every project with a focus on quality workmanship, attention to detail and long-term durability. From residential driveways to bespoke architectural concrete, our goal is simple: build it properly, build it beautifully and build it to last.
               </motion.p>
             </div>
           </div>
