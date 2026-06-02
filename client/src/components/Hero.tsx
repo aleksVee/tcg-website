@@ -71,18 +71,6 @@ export default function Hero() {
           transition={{ duration: 1.5, ease: "easeOut" }}
         />
 
-        {/* Floating Badge */}
-        <motion.div
-          className="absolute bottom-10 right-10 z-20 bg-background/90 backdrop-blur-md p-6 border border-border max-w-xs hidden md:block"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-        >
-          <h3 className="font-display font-bold text-xl mb-2 text-primary">Artisanal Quality</h3>
-          <p className="text-sm text-muted-foreground">
-            From luxury driveways to custom furniture pieces, every pour is a masterpiece.
-          </p>
-        </motion.div>
       </div>
     </section>
   );
