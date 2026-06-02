@@ -48,7 +48,7 @@ export default function ServicePageTemplate({
             <span className="inline-block text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 bg-black/50 px-4 py-2 backdrop-blur-sm border border-primary/30">
               {subtitle}
             </span>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               {title}
             </h1>
           </motion.div>
