@@ -45,26 +45,6 @@ export default function Home() {
 
       <ServicesGrid />
 
-      {/* Legacy Section */}
-      <section className="py-20 bg-background border-b border-border">
-        <div className="container text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Est. 1980s</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              A Family Legacy of Excellence
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-              For over four decades, our family has been shaping the landscape of Canberra. Our work speaks for itself - built with care, finished with precision, and trusted by homeowners who expect it done right.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       <Testimonials />
       <CTASection />
     </Layout>
