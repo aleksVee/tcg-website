@@ -61,7 +61,7 @@ export default function ServicePageTemplate({
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="w-full lg:w-1/2">
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Premium Quality, <br />
+                Built with Precision, <br />
                 <span className="text-primary">Built to Last.</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
