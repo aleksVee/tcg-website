@@ -16,7 +16,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-muted-foreground mb-6 max-w-xs">
-              Building legacies in concrete. Canberra's premium concreters delivering architectural foundations and furniture-grade artistry.
+              Building legacies in concrete. Quality residential and architectural concrete for Canberra homes.
             </p>
             <div className="flex gap-4">
               <a href="https://www.instagram.com/theconcreteguyz?igsh=d3F1cm9mY3loMGxs" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">
