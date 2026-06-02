@@ -10,50 +10,30 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { cn } from "@/lib/utils";
+import emailjs from "@emailjs/browser";
+
+const EMAILJS_SERVICE_ID = "service_dh2r1n8";
+const EMAILJS_TEMPLATE_ID = "template_ita0ejv";
+const EMAILJS_PUBLIC_KEY = "vLTBIR_Ov8g8gpMz1";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
   email: z.string().email("Invalid email address"),
   phone: z.string().min(8, "Valid phone number is required"),
   location: z.string().min(2, "Job location is required"),
-
   description: z.string().min(10, "Please provide a brief description of the job"),
 });
 
 type FormData = z.infer<typeof formSchema>;
-
-const finishOptions = [
-  {
-    id: "exposed",
-    name: "Exposed Aggregate",
-    image: "/images/textures/exposed_aggregate.jpg",
-    description: "Textured, durable, non-slip"
-  },
-  {
-    id: "honed",
-    name: "Honed Concrete",
-    image: "/images/textures/honed_concrete.jpg",
-    description: "Smooth matte finish, outdoor friendly"
-  },
-  {
-    id: "polished",
-    name: "Polished Concrete",
-    image: "/images/textures/polished_concrete.jpg",
-    description: "High-gloss, premium indoor finish"
-  }
-];
 
 export default function QuoteRequest() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
-
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
     reset,
   } = useForm<FormData>({
@@ -66,23 +46,51 @@ export default function QuoteRequest() {
     }
   };
 
-
-
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    console.log("Form Data:", data);
-    console.log("Attached File:", selectedFile?.name);
-    
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    toast.success("Quote request submitted successfully!");
-    reset();
-    setSelectedFile(null);
 
+    try {
+      // If a file is attached, convert it to base64 for inclusion in the email
+      let fileContent = "";
+      let fileName = "";
+      if (selectedFile) {
+        fileName = selectedFile.name;
+        fileContent = await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result as string);
+          reader.onerror = reject;
+          reader.readAsDataURL(selectedFile);
+        });
+      }
+
+      const templateParams = {
+        from_name: data.name,
+        reply_to: data.email,
+        phone: data.phone,
+        location: data.location,
+        message: data.description,
+        project_type: "Quote Request",
+        attachment_name: fileName || "No file attached",
+        attachment: fileContent || "",
+      };
+
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      setIsSuccess(true);
+      toast.success("Quote request submitted successfully!");
+      reset();
+      setSelectedFile(null);
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast.error("Something went wrong. Please try again or call us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -195,8 +203,6 @@ export default function QuoteRequest() {
                   </div>
                 </div>
 
-
-
                 <div className="space-y-2">
                   <Label htmlFor="description" className="text-foreground font-bold uppercase tracking-wider text-xs">Project Description</Label>
                   <Textarea
@@ -212,7 +218,7 @@ export default function QuoteRequest() {
 
                 <div className="space-y-4 flex flex-col items-center justify-center py-4">
                   <Label className="text-foreground font-bold uppercase tracking-wider text-xs">Upload Photo (Optional)</Label>
-                  <div 
+                  <div
                     className="w-28 h-28 rounded-full border-2 border-dashed border-border hover:border-primary/50 transition-all duration-300 cursor-pointer bg-background/50 flex flex-col items-center justify-center gap-1 group relative overflow-hidden"
                     onClick={() => document.getElementById('file-upload')?.click()}
                   >
@@ -223,7 +229,7 @@ export default function QuoteRequest() {
                       className="hidden"
                       onChange={handleFileChange}
                     />
-                    
+
                     {selectedFile ? (
                       <div className="absolute inset-0 bg-primary/5 flex flex-col items-center justify-center p-4 text-center">
                         <CheckCircle2 className="w-8 h-8 text-primary mb-2" />
