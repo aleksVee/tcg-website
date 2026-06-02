@@ -38,7 +38,7 @@ export default function OurStory() {
               className="prose prose-lg md:prose-xl prose-stone mx-auto text-foreground/80"
             >
               <p className="lead text-2xl text-foreground mb-8">
-                The Concrete Guyz is a small, family-run business built on over 50 years of construction experience, passed down through three generations.
+                The Concrete Guyz is a small, family-run business built on over 40 years of construction experience, passed down through three generations.
               </p>
               
               <p className="mb-6">
