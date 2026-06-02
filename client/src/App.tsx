@@ -36,7 +36,7 @@ function Router() {
       <Route path="/contact">
         <PlaceholderPage 
           title="Contact Us" 
-          description="Please email us at zac@theconcreteguyz.com.au or call 0428 728 123 for inquiries." 
+          description="Please email us at zac@theconcreteguyz.com.au or call 0428 726 123 for inquiries." 
         />
       </Route>
 
