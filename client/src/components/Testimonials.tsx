@@ -34,7 +34,7 @@ export default function Testimonials() {
         <div className="text-center mb-16">
           <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Client Stories</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
-            Trusted by Canberra's Best
+            Trusted by Canberra Locals
           </h2>
         </div>
 
