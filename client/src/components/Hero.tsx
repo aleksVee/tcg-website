@@ -6,7 +6,7 @@ const homeImg = "https://d2xsxph8kpxj0f.cloudfront.net/114162150/9cq25HcAAqsxAnn
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col lg:flex-row overflow-hidden border-b border-border">
+    <section className="relative min-h-[90svh] flex flex-col lg:flex-row overflow-hidden border-b border-border">
       {/* Left Content Side */}
       <div className="w-full lg:w-[45%] flex flex-col justify-center py-20 lg:py-0 bg-background relative z-10 container">
         {/* Subtle Grid Background */}
@@ -44,8 +44,8 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Decorative elements */}
-        <div className="absolute bottom-10 left-20 hidden lg:block">
+        {/* Stats - visible on mobile and desktop */}
+        <div className="mt-10 lg:absolute lg:bottom-10 lg:left-20">
           <div className="flex gap-8">
             <div className="flex flex-col">
               <span className="text-3xl font-display font-bold text-foreground">40+</span>

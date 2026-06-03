@@ -20,7 +20,7 @@ export default function OurStory() {
               transition={{ duration: 0.6 }}
             >
               <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Our Heritage</span>
-              <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
                 Our Story
               </h1>
             </motion.div>
@@ -53,7 +53,7 @@ export default function OurStory() {
                 Today, that foundation is reflected in every project - combining practical construction knowledge with a clean, well-executed finish.
               </p>
               
-              <div className="flex gap-4 justify-center mt-12">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
                 <Link href="/">
                   <Button variant="outline" className="rounded-none px-8 py-6 font-bold uppercase tracking-wider">
                     Back Home

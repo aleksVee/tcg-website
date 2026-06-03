@@ -32,7 +32,7 @@ export default function ServicePageTemplate({
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50svh] min-h-[380px] sm:min-h-[450px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -48,7 +48,7 @@ export default function ServicePageTemplate({
             <span className="inline-block text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 bg-black/50 px-4 py-2 backdrop-blur-sm border border-primary/30">
               {subtitle}
             </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               {title}
             </h1>
           </motion.div>

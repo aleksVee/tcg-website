@@ -115,6 +115,14 @@ export default function Header() {
           isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
+        {/* Close Button */}
+        <button
+          className="absolute top-6 right-6 text-foreground p-2"
+          onClick={() => setIsMobileMenuOpen(false)}
+          aria-label="Close menu"
+        >
+          <X size={28} />
+        </button>
         {navLinks.map((link) => (
           <a
             key={link.path}

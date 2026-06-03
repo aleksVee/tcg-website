@@ -27,21 +27,20 @@ export default function Footer() {
 
           <div className="col-span-1">
             <h4 className="font-display font-bold text-lg mb-6 text-primary">Services</h4>
-            <ul className="space-y-3">
-              <li><Link href="/services/driveways" className="text-muted-foreground hover:text-primary transition-colors">Driveways & Hardscapes</Link></li>
-              <li><Link href="/services/garages-sheds" className="text-muted-foreground hover:text-primary transition-colors">Garages & Shed Slabs</Link></li>
-
-              <li><Link href="/services/artisanal" className="text-muted-foreground hover:text-primary transition-colors">In-Situ & Bespoke Pieces</Link></li>
+            <ul className="space-y-1">
+              <li><Link href="/services/driveways" className="text-muted-foreground hover:text-primary transition-colors block py-2">Driveways & Hardscapes</Link></li>
+              <li><Link href="/services/garages-sheds" className="text-muted-foreground hover:text-primary transition-colors block py-2">Garages & Shed Slabs</Link></li>
+              <li><Link href="/services/artisanal" className="text-muted-foreground hover:text-primary transition-colors block py-2">In-Situ & Bespoke Pieces</Link></li>
             </ul>
           </div>
 
           <div className="col-span-1">
             <h4 className="font-display font-bold text-lg mb-6 text-primary">Company</h4>
-            <ul className="space-y-3">
-              <li><Link href="/story" className="text-muted-foreground hover:text-primary transition-colors">Our Story</Link></li>
-              <li><Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">Portfolio</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact Us</Link></li>
-              <li><Link href="/quote" className="text-muted-foreground hover:text-primary transition-colors">Request Quote</Link></li>
+            <ul className="space-y-1">
+              <li><Link href="/story" className="text-muted-foreground hover:text-primary transition-colors block py-2">Our Story</Link></li>
+              <li><Link href="/portfolio" className="text-muted-foreground hover:text-primary transition-colors block py-2">Portfolio</Link></li>
+              <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors block py-2">Contact Us</Link></li>
+              <li><Link href="/quote" className="text-muted-foreground hover:text-primary transition-colors block py-2">Request Quote</Link></li>
             </ul>
           </div>
 
@@ -54,11 +53,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-primary shrink-0" />
-                <a href="tel:+61428726123" className="text-muted-foreground hover:text-primary transition-colors">0428 726 123</a>
+                <a href="tel:+61428726123" className="text-muted-foreground hover:text-primary transition-colors py-2 block">0428 726 123</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-primary shrink-0" />
-                <a href="mailto:zac@theconcreteguyz.com.au" className="text-muted-foreground hover:text-primary transition-colors">zac@theconcreteguyz.com.au</a>
+                <a href="mailto:zac@theconcreteguyz.com.au" className="text-muted-foreground hover:text-primary transition-colors py-2 block break-all">zac@theconcreteguyz.com.au</a>
               </li>
             </ul>
           </div>

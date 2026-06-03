@@ -116,7 +116,7 @@ export default function QuoteRequest() {
             </p>
           </motion.div>
 
-          <div className="bg-card border border-border p-8 md:p-12 shadow-sm relative overflow-hidden">
+          <div className="bg-card border border-border p-5 sm:p-8 md:p-12 shadow-sm relative overflow-hidden">
             {/* Gold Top Border Accent */}
             <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
             {/* Subtle Warm Background Tint */}
@@ -265,12 +265,12 @@ export default function QuoteRequest() {
                   </Button>
 
                   {/* Trust Badge */}
-                  <div className="flex items-center gap-6 text-muted-foreground/80 bg-muted/30 px-6 py-3 rounded-full border border-border/50">
+                  <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-muted-foreground/80 bg-muted/30 px-6 py-3 rounded-full border border-border/50 text-center sm:text-left">
                     <div className="flex items-center gap-2">
                       <ShieldCheck className="w-5 h-5 text-primary" />
                       <span className="text-xs font-bold uppercase tracking-wider">Fully Licensed & Insured</span>
                     </div>
-                    <div className="w-px h-4 bg-border"></div>
+                    <div className="hidden sm:block w-px h-4 bg-border"></div>
                     <div className="flex items-center gap-2">
                       <div className="flex">
                         {[1, 2, 3, 4, 5].map((i) => (
