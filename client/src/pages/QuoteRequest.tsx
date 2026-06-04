@@ -28,7 +28,7 @@ const formSchema = z.object({
       },
       { message: "Please enter a valid Australian mobile number (e.g. 0428 726 123 or +61428726123)" }
     ),
-  contactMethod: z.enum(["email", "phone_call", "text_message", "no_preference"], {
+  contactMethod: z.enum(["email", "phone_call"], {
     message: "Please select a preferred contact method",
   }),
   location: z.string().min(2, "Job location is required"),
@@ -40,8 +40,6 @@ type FormData = z.infer<typeof formSchema>;
 const contactMethodLabels: Record<string, string> = {
   email: "Email",
   phone_call: "Phone Call",
-  text_message: "Text Message",
-  no_preference: "No Preference",
 };
 
 export default function QuoteRequest() {
@@ -197,8 +195,6 @@ export default function QuoteRequest() {
                       <option value="" disabled>Select a method...</option>
                       <option value="email">Email</option>
                       <option value="phone_call">Phone Call</option>
-                      <option value="text_message">Text Message</option>
-                      <option value="no_preference">No Preference</option>
                     </select>
                     {errors.contactMethod && (
                       <p className="text-destructive text-sm">{errors.contactMethod.message}</p>
