@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
-import { CheckCircle2, Loader2, ShieldCheck, Star } from "lucide-react";
+import { CheckCircle2, Loader2, ShieldCheck, Star, CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -41,15 +41,29 @@ type FormData = z.infer<typeof formSchema>;
 export default function QuoteRequest() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [phoneValue, setPhoneValue] = useState("");
+  const [isPhoneValid, setIsPhoneValid] = useState(false);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    watch,
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
+
+  const watchedPhone = watch("phone", "");
+
+  useEffect(() => {
+    const cleaned = (watchedPhone || "").replace(/[\s\-]/g, "");
+    const valid =
+      /^04\d{8}$/.test(cleaned) ||
+      /^\+614\d{8}$/.test(cleaned) ||
+      /^614\d{8}$/.test(cleaned);
+    setIsPhoneValid(valid);
+  }, [watchedPhone]);
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
@@ -167,12 +181,21 @@ export default function QuoteRequest() {
 
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="text-foreground font-bold uppercase tracking-wider text-xs">Phone Number</Label>
-                    <Input
-                      id="phone"
-                      placeholder="0428 726 123"
-                      {...register("phone")}
-                      className="bg-background/80 border-input focus:border-primary focus:bg-background h-12 transition-all duration-300"
-                    />
+                    <div className="relative">
+                      <Input
+                        id="phone"
+                        placeholder="0428 726 123"
+                        {...register("phone")}
+                        className={`bg-background/80 border-input focus:border-primary focus:bg-background h-12 transition-all duration-300 pr-10 ${
+                          isPhoneValid ? "border-green-500 focus:border-green-500" : ""
+                        }`}
+                      />
+                      {isPhoneValid && (
+                        <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                          <CheckCircle className="w-5 h-5 text-green-500 animate-in fade-in zoom-in duration-200" />
+                        </div>
+                      )}
+                    </div>
                     {errors.phone && (
                       <p className="text-destructive text-sm">{errors.phone.message}</p>
                     )}
