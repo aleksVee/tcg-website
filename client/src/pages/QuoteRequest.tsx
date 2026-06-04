@@ -43,6 +43,7 @@ export default function QuoteRequest() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [phoneValue, setPhoneValue] = useState("");
   const [isPhoneValid, setIsPhoneValid] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(false);
 
   const {
     register,
@@ -55,6 +56,7 @@ export default function QuoteRequest() {
   });
 
   const watchedPhone = watch("phone", "");
+  const watchedEmail = watch("email", "");
 
   useEffect(() => {
     const cleaned = (watchedPhone || "").replace(/[\s\-]/g, "");
@@ -64,6 +66,11 @@ export default function QuoteRequest() {
       /^614\d{8}$/.test(cleaned);
     setIsPhoneValid(valid);
   }, [watchedPhone]);
+
+  useEffect(() => {
+    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(watchedEmail || "");
+    setIsEmailValid(valid);
+  }, [watchedEmail]);
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
@@ -167,13 +174,22 @@ export default function QuoteRequest() {
 
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-foreground font-bold uppercase tracking-wider text-xs">Email Address</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="john@example.com"
-                      {...register("email")}
-                      className="bg-background/80 border-input focus:border-primary focus:bg-background h-12 transition-all duration-300"
-                    />
+                    <div className="relative">
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="john@example.com"
+                        {...register("email")}
+                        className={`bg-background/80 border-input focus:border-primary focus:bg-background h-12 transition-all duration-300 pr-10 ${
+                          isEmailValid ? "border-green-500 focus:border-green-500" : ""
+                        }`}
+                      />
+                      {isEmailValid && (
+                        <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                          <CheckCircle className="w-5 h-5 text-green-500 animate-in fade-in zoom-in duration-200" />
+                        </div>
+                      )}
+                    </div>
                     {errors.email && (
                       <p className="text-destructive text-sm">{errors.email.message}</p>
                     )}
