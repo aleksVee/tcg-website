@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
-import { Upload, CheckCircle2, Loader2, ShieldCheck, Star } from "lucide-react";
+import { CheckCircle2, Loader2, ShieldCheck, Star } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -29,7 +29,6 @@ type FormData = z.infer<typeof formSchema>;
 export default function QuoteRequest() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   const {
     register,
@@ -40,29 +39,10 @@ export default function QuoteRequest() {
     resolver: zodResolver(formSchema),
   });
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setSelectedFile(e.target.files[0]);
-    }
-  };
-
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
 
     try {
-      // If a file is attached, convert it to base64 for inclusion in the email
-      let fileContent = "";
-      let fileName = "";
-      if (selectedFile) {
-        fileName = selectedFile.name;
-        fileContent = await new Promise<string>((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onload = () => resolve(reader.result as string);
-          reader.onerror = reject;
-          reader.readAsDataURL(selectedFile);
-        });
-      }
-
       const templateParams = {
         from_name: data.name,
         reply_to: data.email,
@@ -70,8 +50,6 @@ export default function QuoteRequest() {
         location: data.location,
         message: data.description,
         project_type: "Quote Request",
-        attachment_name: fileName || "No file attached",
-        attachment: fileContent || "",
       };
 
       await emailjs.send(
@@ -84,7 +62,6 @@ export default function QuoteRequest() {
       setIsSuccess(true);
       toast.success("Quote request submitted successfully!");
       reset();
-      setSelectedFile(null);
     } catch (error) {
       console.error("EmailJS error:", error);
       toast.error("Something went wrong. Please try again or call us directly.");
@@ -214,38 +191,6 @@ export default function QuoteRequest() {
                   {errors.description && (
                     <p className="text-destructive text-sm">{errors.description.message}</p>
                   )}
-                </div>
-
-                <div className="space-y-4 flex flex-col items-center justify-center py-4">
-                  <Label className="text-foreground font-bold uppercase tracking-wider text-xs">Upload Photo (Optional)</Label>
-                  <div
-                    className="w-28 h-28 rounded-full border-2 border-dashed border-border hover:border-primary/50 transition-all duration-300 cursor-pointer bg-background/50 flex flex-col items-center justify-center gap-1 group relative overflow-hidden"
-                    onClick={() => document.getElementById('file-upload')?.click()}
-                  >
-                    <input
-                      id="file-upload"
-                      type="file"
-                      accept="image/*"
-                      className="hidden"
-                      onChange={handleFileChange}
-                    />
-
-                    {selectedFile ? (
-                      <div className="absolute inset-0 bg-primary/5 flex flex-col items-center justify-center p-4 text-center">
-                        <CheckCircle2 className="w-8 h-8 text-primary mb-2" />
-                        <span className="text-xs font-bold text-primary truncate w-full px-2">{selectedFile.name}</span>
-                        <span className="text-[10px] text-muted-foreground mt-1">Click to change</span>
-                      </div>
-                    ) : (
-                      <>
-                        <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                          <Upload className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                        </div>
-                        <span className="text-[10px] font-medium text-muted-foreground group-hover:text-primary transition-colors">Upload Photo</span>
-                      </>
-                    )}
-                  </div>
-                  <p className="text-[10px] text-muted-foreground/60 uppercase tracking-widest">JPG, PNG or PDF up to 10MB</p>
                 </div>
 
                 <div className="pt-4 flex flex-col items-center gap-6">
