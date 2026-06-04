@@ -23,25 +23,30 @@ const formSchema = z.object({
     .min(1, "Phone number is required")
     .refine(
       (val) => {
-        // Strip spaces and hyphens for validation
         const cleaned = val.replace(/[\s\-]/g, "");
-        // Accept: 04XXXXXXXX (10 digits starting with 04)
-        // Accept: +614XXXXXXXX (international format)
-        // Accept: 614XXXXXXXX (without +)
         return /^04\d{8}$/.test(cleaned) || /^\+614\d{8}$/.test(cleaned) || /^614\d{8}$/.test(cleaned);
       },
       { message: "Please enter a valid Australian mobile number (e.g. 0428 726 123 or +61428726123)" }
     ),
+  contactMethod: z.enum(["email", "phone_call", "text_message", "no_preference"], {
+    message: "Please select a preferred contact method",
+  }),
   location: z.string().min(2, "Job location is required"),
   description: z.string().min(10, "Please provide a brief description of the job"),
 });
 
 type FormData = z.infer<typeof formSchema>;
 
+const contactMethodLabels: Record<string, string> = {
+  email: "Email",
+  phone_call: "Phone Call",
+  text_message: "Text Message",
+  no_preference: "No Preference",
+};
+
 export default function QuoteRequest() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [phoneValue, setPhoneValue] = useState("");
   const [isPhoneValid, setIsPhoneValid] = useState(false);
   const [isEmailValid, setIsEmailValid] = useState(false);
 
@@ -80,6 +85,7 @@ export default function QuoteRequest() {
         from_name: data.name,
         reply_to: data.email,
         phone: data.phone,
+        contact_method: contactMethodLabels[data.contactMethod] ?? data.contactMethod,
         location: data.location,
         message: data.description,
         project_type: "Quote Request",
@@ -218,6 +224,33 @@ export default function QuoteRequest() {
                   </div>
 
                   <div className="space-y-2">
+                    <Label htmlFor="contactMethod" className="text-foreground font-bold uppercase tracking-wider text-xs">Preferred Contact Method</Label>
+                    <select
+                      id="contactMethod"
+                      {...register("contactMethod")}
+                      defaultValue=""
+                      className={`w-full bg-background/80 border border-input focus:border-primary focus:bg-background h-12 px-3 text-sm transition-all duration-300 rounded-md outline-none focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer ${
+                        errors.contactMethod ? "border-destructive" : ""
+                      }`}
+                      style={{
+                        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "right 14px center",
+                        paddingRight: "2.5rem",
+                      }}
+                    >
+                      <option value="" disabled>Select a method...</option>
+                      <option value="email">Email</option>
+                      <option value="phone_call">Phone Call</option>
+                      <option value="text_message">Text Message</option>
+                      <option value="no_preference">No Preference</option>
+                    </select>
+                    {errors.contactMethod && (
+                      <p className="text-destructive text-sm">{errors.contactMethod.message}</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2 md:col-span-2">
                     <Label htmlFor="location" className="text-foreground font-bold uppercase tracking-wider text-xs">Job Location</Label>
                     <Input
                       id="location"
