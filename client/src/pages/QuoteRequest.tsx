@@ -179,25 +179,29 @@ export default function QuoteRequest() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-foreground font-bold uppercase tracking-wider text-xs">Email Address</Label>
-                    <div className="relative">
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="john@example.com"
-                        {...register("email")}
-                        className={`bg-background/80 border-input focus:border-primary focus:bg-background h-12 transition-all duration-300 pr-10 ${
-                          isEmailValid ? "border-green-500 focus:border-green-500" : ""
-                        }`}
-                      />
-                      {isEmailValid && (
-                        <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-                          <CheckCircle className="w-5 h-5 text-green-500 animate-in fade-in zoom-in duration-200" />
-                        </div>
-                      )}
-                    </div>
-                    {errors.email && (
-                      <p className="text-destructive text-sm">{errors.email.message}</p>
+                    <Label htmlFor="contactMethod" className="text-foreground font-bold uppercase tracking-wider text-xs">Preferred Contact Method</Label>
+                    <select
+                      id="contactMethod"
+                      {...register("contactMethod")}
+                      defaultValue=""
+                      className={`w-full bg-background/80 border border-input focus:border-primary focus:bg-background h-12 px-3 text-sm transition-all duration-300 rounded-md outline-none focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer ${
+                        errors.contactMethod ? "border-destructive" : ""
+                      }`}
+                      style={{
+                        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "right 14px center",
+                        paddingRight: "2.5rem",
+                      }}
+                    >
+                      <option value="" disabled>Select a method...</option>
+                      <option value="email">Email</option>
+                      <option value="phone_call">Phone Call</option>
+                      <option value="text_message">Text Message</option>
+                      <option value="no_preference">No Preference</option>
+                    </select>
+                    {errors.contactMethod && (
+                      <p className="text-destructive text-sm">{errors.contactMethod.message}</p>
                     )}
                   </div>
 
@@ -224,29 +228,25 @@ export default function QuoteRequest() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="contactMethod" className="text-foreground font-bold uppercase tracking-wider text-xs">Preferred Contact Method</Label>
-                    <select
-                      id="contactMethod"
-                      {...register("contactMethod")}
-                      defaultValue=""
-                      className={`w-full bg-background/80 border border-input focus:border-primary focus:bg-background h-12 px-3 text-sm transition-all duration-300 rounded-md outline-none focus:ring-2 focus:ring-primary/20 appearance-none cursor-pointer ${
-                        errors.contactMethod ? "border-destructive" : ""
-                      }`}
-                      style={{
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "right 14px center",
-                        paddingRight: "2.5rem",
-                      }}
-                    >
-                      <option value="" disabled>Select a method...</option>
-                      <option value="email">Email</option>
-                      <option value="phone_call">Phone Call</option>
-                      <option value="text_message">Text Message</option>
-                      <option value="no_preference">No Preference</option>
-                    </select>
-                    {errors.contactMethod && (
-                      <p className="text-destructive text-sm">{errors.contactMethod.message}</p>
+                    <Label htmlFor="email" className="text-foreground font-bold uppercase tracking-wider text-xs">Email Address</Label>
+                    <div className="relative">
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="john@example.com"
+                        {...register("email")}
+                        className={`bg-background/80 border-input focus:border-primary focus:bg-background h-12 transition-all duration-300 pr-10 ${
+                          isEmailValid ? "border-green-500 focus:border-green-500" : ""
+                        }`}
+                      />
+                      {isEmailValid && (
+                        <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                          <CheckCircle className="w-5 h-5 text-green-500 animate-in fade-in zoom-in duration-200" />
+                        </div>
+                      )}
+                    </div>
+                    {errors.email && (
+                      <p className="text-destructive text-sm">{errors.email.message}</p>
                     )}
                   </div>
 
