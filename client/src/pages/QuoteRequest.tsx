@@ -19,7 +19,19 @@ const EMAILJS_PUBLIC_KEY = "vLTBIR_Ov8g8gpMz1";
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
   email: z.string().email("Invalid email address"),
-  phone: z.string().min(8, "Valid phone number is required"),
+  phone: z.string()
+    .min(1, "Phone number is required")
+    .refine(
+      (val) => {
+        // Strip spaces and hyphens for validation
+        const cleaned = val.replace(/[\s\-]/g, "");
+        // Accept: 04XXXXXXXX (10 digits starting with 04)
+        // Accept: +614XXXXXXXX (international format)
+        // Accept: 614XXXXXXXX (without +)
+        return /^04\d{8}$/.test(cleaned) || /^\+614\d{8}$/.test(cleaned) || /^614\d{8}$/.test(cleaned);
+      },
+      { message: "Please enter a valid Australian mobile number (e.g. 0428 726 123 or +61428726123)" }
+    ),
   location: z.string().min(2, "Job location is required"),
   description: z.string().min(10, "Please provide a brief description of the job"),
 });
