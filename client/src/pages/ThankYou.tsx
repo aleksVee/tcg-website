@@ -1,7 +1,10 @@
 import { useEffect } from "react";
+import { useLocation } from "wouter";
 import { Link } from "wouter";
 
 export default function ThankYou() {
+  const [, setLocation] = useLocation();
+
   // Push a conversion event to GTM dataLayer on page load
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -68,11 +71,18 @@ export default function ThankYou() {
                 Back to Home
               </button>
             </Link>
-            <Link href="/#services">
-              <button className="px-8 py-3 border border-[#222222] text-[#222222] font-['Lato'] font-semibold tracking-widest text-sm uppercase hover:bg-[#222222] hover:text-white transition-colors duration-300 cursor-pointer">
-                Our Services
-              </button>
-            </Link>
+            <button
+              onClick={() => {
+                setLocation("/");
+                setTimeout(() => {
+                  const el = document.getElementById("services");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+              className="px-8 py-3 border border-[#222222] text-[#222222] font-['Lato'] font-semibold tracking-widest text-sm uppercase hover:bg-[#222222] hover:text-white transition-colors duration-300 cursor-pointer"
+            >
+              Our Services
+            </button>
           </div>
         </div>
       </main>
