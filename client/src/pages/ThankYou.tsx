@@ -53,13 +53,9 @@ export default function ThankYou() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-[#555555] text-lg leading-relaxed mb-3 font-['Lato']">
-            Thanks for reaching out to The Concrete Guyz. Zac will review your
-            request and be in touch shortly.
-          </p>
-          <p className="text-[#888888] text-base font-['Lato'] mb-12">
-            In the meantime, feel free to browse our work or check out what we
-            offer.
+          <p className="text-[#555555] text-lg leading-relaxed mb-12 font-['Lato']">
+            Thanks for reaching out to The Concrete Guyz. We will review your
+            request and be in touch soon.
           </p>
 
           {/* Divider */}
