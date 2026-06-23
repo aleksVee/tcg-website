@@ -13,6 +13,7 @@ import GaragesSheds from "./pages/services/GaragesSheds";
 import Artisanal from "./pages/services/Artisanal";
 import ScrollToTop from "./components/ScrollToTop";
 import QuoteRequest from "./pages/QuoteRequest";
+import ThankYou from "./pages/ThankYou";
 
 function Router() {
   return (
@@ -41,6 +42,7 @@ function Router() {
       </Route>
 
       <Route path="/quote" component={QuoteRequest} />
+      <Route path="/thank-you" component={ThankYou} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
       </Switch>

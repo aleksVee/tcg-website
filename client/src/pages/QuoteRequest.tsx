@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -43,6 +44,7 @@ const contactMethodLabels: Record<string, string> = {
 };
 
 export default function QuoteRequest() {
+  const [, setLocation] = useLocation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isPhoneValid, setIsPhoneValid] = useState(false);
@@ -97,8 +99,8 @@ export default function QuoteRequest() {
       );
 
       setIsSuccess(true);
-      toast.success("Quote request submitted successfully!");
-      reset();
+      // Redirect to Thank You page for GTM conversion tracking
+      setLocation("/thank-you");
     } catch (error) {
       console.error("EmailJS error:", error);
       toast.error("Something went wrong. Please try again or call us directly.");
