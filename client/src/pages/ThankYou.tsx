@@ -68,7 +68,7 @@ export default function ThankYou() {
                 Back to Home
               </button>
             </Link>
-            <Link href="/services">
+            <Link href="/#services">
               <button className="px-8 py-3 border border-[#222222] text-[#222222] font-['Lato'] font-semibold tracking-widest text-sm uppercase hover:bg-[#222222] hover:text-white transition-colors duration-300 cursor-pointer">
                 Our Services
               </button>
